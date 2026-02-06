@@ -9,7 +9,7 @@
                     </a>
                 </div> -->
             {{ end }}
-            &copy; {{ now.Format "2006"}} {{ .Site.Params.copyright }} {{ .Site.Params.terms.copyright | default "All Rights Reserved" }}
+            &copy; {{ now.Format "2006"}} {{ .Site.Params.copyright }} {{ .Site.Params.terms.copyright | default "All Rights Reserved" }} - <a href="{{ "privacy/" | relURL }}">Privacy Policy</a>
             <div class="text-secondary">
                 🔨 Built with
                 <a href="https://github.com/gurusabarish/hugo-profile" target="_blank">

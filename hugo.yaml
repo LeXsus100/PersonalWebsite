@@ -471,7 +471,6 @@ params:
       linkedin: https://www.linkedin.com/in/luigi-casagrande/
       # twitter: https://twitter.com
       # instagram: https://instagram.com
-      # facebook: https://facebook.com
 
   # List pages like blogs and posts
   listPages:
@@ -479,7 +478,7 @@ params:
 
   # Single pages like blog and post
   singlePages:
-    socialShare: true
+    socialShare: false
     readTime:
       enable: true
       content: "min read"
