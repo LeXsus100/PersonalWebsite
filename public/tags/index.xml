@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Luigi</title>
+    <link>http://localhost:1313/tags/</link>
+    <description>Recent content in Tags on Luigi</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 09 Dec 2022 19:53:33 +0530</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Example</title>
+      <link>http://localhost:1313/tags/example/</link>
+      <pubDate>Fri, 09 Dec 2022 19:53:33 +0530</pubDate>
+      <guid>http://localhost:1313/tags/example/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Markdown Syntax</title>
+      <link>http://localhost:1313/tags/markdown-syntax/</link>
+      <pubDate>Fri, 09 Dec 2022 19:53:33 +0530</pubDate>
+      <guid>http://localhost:1313/tags/markdown-syntax/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Mathjax</title>
+      <link>http://localhost:1313/tags/mathjax/</link>
+      <pubDate>Fri, 09 Dec 2022 19:53:33 +0530</pubDate>
+      <guid>http://localhost:1313/tags/mathjax/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Second Tag? No Way</title>
+      <link>http://localhost:1313/tags/second-tag-no-way/</link>
+      <pubDate>Fri, 09 Dec 2022 19:53:33 +0530</pubDate>
+      <guid>http://localhost:1313/tags/second-tag-no-way/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Wtf Is This Tag</title>
+      <link>http://localhost:1313/tags/wtf-is-this-tag/</link>
+      <pubDate>Fri, 09 Dec 2022 19:53:33 +0530</pubDate>
+      <guid>http://localhost:1313/tags/wtf-is-this-tag/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>
