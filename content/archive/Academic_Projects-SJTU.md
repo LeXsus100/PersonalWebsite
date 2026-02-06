@@ -13,8 +13,8 @@ toc: false
 mathjax: true
 ---
 
-A small selection of projects completed during my exchange program in Shanghai.  
-These are standard coursework projects, shared mainly for reference and documentation.
+This page presents a small selection of projects completed during my exchange program in Shanghai.  
+They are standard coursework projects, shared mainly for reference and documentation purposes.
 
 Everything here is written in LaTeX; I describe my setup and workflow in a separate article available here: [LaTeX Setup](/latex-setup.md).
 
