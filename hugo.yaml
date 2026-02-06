@@ -210,9 +210,9 @@ params:
       - company: None
         companyUrl: ""
         jobs:
-          - name: LFW # Job Title
+          - name: Looking for work # Job Title
             date: Ready
-            content: Graduating in March 2026 - Looking for work
+            content: Graduating in March 2026
             info:
               content: Yep, still empty # Synthetic explanation
 
@@ -304,7 +304,7 @@ params:
         date: Sep 2023 - Mar 2026
         final_grade: ?? out of 110
         content: |-
-          Specialization in **Engineering Application**.
+          Specialisation in **Engineering Application**.
 
           Relevant courseworks:
             - Metallic Materials and Product Innovation
@@ -315,7 +315,7 @@ params:
           A limited selection of **lecture notes** from this period is available <a href="/archive/academic_projects-polimi/">here</a>.
 
           🎓 **Master's Thesis ➝ Solid-State Aluminium Recycling**  
-          Experimental investigation of **solid-state aluminium recycling** via roll bonding, analysing the influence of process parameters on microstructure, mechanical properties, and hardness to assess feasibility and material behavior.
+          Experimental investigation of **solid-state aluminium recycling** via roll bonding, analysing the influence of process parameters on microstructure, mechanical properties, and hardness to assess feasibility and material behaviour.
 
         featuredLink:
           enable: true
@@ -352,7 +352,7 @@ params:
             - Structural Mechanics
 
           🧪 **Bachelor's Thesis ➝ Printed Device for Energy Storage (Group Project)**  
-          Development and characterization of a printed energy-storage device, focusing on **gel-based electrolytes** to optimize energy density, ionic conductivity (non-electronic transport), and mechanical resistance for improved overall performance.
+          Development and characterization of a printed energy-storage device, focusing on **gel-based electrolytes** to optimize energy density, ionic conductivity, and mechanical resistance for improved overall performance.
 
         featuredLink:
           enable: true
