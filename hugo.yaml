@@ -172,7 +172,7 @@ params:
     title: "About Me"
     # image: "/images/me.png"
     content: |
-      I hold a master's degree in **Engineering**, but my professional and personal path has never followed a single, linear track. I have always been **driven by challenges**, especially those that require discipline, curiosity, and the **willingness to step outside my comfort zone**.
+      I *(almost)* hold a master's degree in **Materials Engineering**, but my professional and personal path has never followed a single, linear track. I have always been **driven by challenges**, especially those that require discipline, curiosity, and the **willingness to step outside my comfort zone**.
 
       Alongside my academic background, I have pursued **competitive swimming** at an agonistic level, studied **piano** with formal examinations at a conservatory, and continuously tested myself through **mathematics competitions**.  
       I have lived and studied abroad, including experiences in **Australia** and **China**, and completed a **sailing course** with the Italian Navy, each of these shaping the way I approach problems, teamwork, and long-term goals.
@@ -215,17 +215,17 @@ params:
         companyUrl: "https://www.quantaclub.com/"
         jobs:
           - name: "Certified Pool Lifeguard"
-            date: "Jun 2022 - Sep 2023"
+            date: "Jul 2022 - Sep 2023"
             content: "Lifeguard duties in public swimming pools, ensuring swimmer safety and regulatory compliance."
             info:
               content: Quanta Club - Milano, Italy
             featuredItems:
               fontAwesomeIcons:
                 - icon: fa-solid fa-id-card
-                  url: pdf/Luigi_Casagrande-AB_card.pdf
+                  url: "mailto:luigi.casagrande@outlook.it"
                   tooltip: Valid Lifeguard Certification
           - name: "Pool Lifeguard"
-            date: "Jun 2021 - Sep 2022"
+            date: "Jul 2021 - Aug 2022"
             # content: "Lifeguard duties in public swimming pools, ensuring swimmer safety and regulatory compliance."
             info:
               content: Quanta Club - Milano, Italy
@@ -353,25 +353,25 @@ params:
 
   # ====================================== ACHIEVEMENTS ====================================== #
   achievements:
-    enable: false
+    enable: true
     # title: "Custom Name"
     items:
-      - title: Google kickstart runner
-        content: I solved all problems with optimal solution.
-        url: https://example.com
-        image: /images/achievement.jpg
-      - title: Facebook Hackathon Winner
-        content: Developed a product using Artificial Intelligence.
-        image: /images/achievement.jpg
-      - title: Hugo Profile
-        content: Developed a theme and getting 1K+ downloads per month.
-        url: "https://github.com/gurusabarish/hugo-profile"
-        image: /images/achievement.jpg
-      - title: Microsoft Imagine Runner
-        content: We are developed a product which can help others.
-      - title: Google Summer of Code
-        content: Contributed to a open source project.
-        url: https://example.com
+      - title: Coppa Aurea
+        content: First-place winner of the Italian National Team Mathematics Competition for High Schools, organized by the University of Trieste (2017).
+        url: https://www.coppaaurea.units.it/divulgazione/olimpia17/
+        image: /images/Coppa-Aurea_Winner-2017.jpg
+      # - title: Facebook Hackathon Winner
+      #   content: Developed a product using Artificial Intelligence.
+      #   image: /images/achievement.jpg
+      # - title: Hugo Profile
+      #   content: Developed a theme and getting 1K+ downloads per month.
+      #   url: "https://github.com/gurusabarish/hugo-profile"
+      #   image: /images/achievement.jpg
+      # - title: Microsoft Imagine Runner
+      #   content: We are developed a product which can help others.
+      # - title: Google Summer of Code
+      #   content: Contributed to a open source project.
+      #   url: https://example.com
 
   # ====================================== PROJECTS ====================================== #
   projects:
