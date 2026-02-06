@@ -1,33 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Luigi</title>
-    <link>http://localhost:1313/</link>
-    <description>Recent content on Luigi</description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
-    <lastBuildDate>Fri, 09 Dec 2022 19:53:33 +0530</lastBuildDate>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Idk what Im doing</title>
-      <link>http://localhost:1313/blog/example_random/</link>
-      <pubDate>Fri, 09 Dec 2022 19:53:33 +0530</pubDate>
-      <guid>http://localhost:1313/blog/example_random/</guid>
-      <description>&lt;h3 id=&#34;theres-no-way-that-this-is-gonna-work&#34;&gt;There&amp;rsquo;s no way that this is gonna work&lt;/h3&gt;&#xA;&lt;p&gt;But I guess it does&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Render Math With Mathjax</title>
-      <link>http://localhost:1313/blog/math/</link>
-      <pubDate>Fri, 09 Dec 2022 19:53:33 +0530</pubDate>
-      <guid>http://localhost:1313/blog/math/</guid>
-      <description>&lt;h2 id=&#34;mathjax&#34;&gt;Mathjax&lt;/h2&gt;&#xA;&lt;p&gt;This is my edited version let&amp;rsquo;s see if changes&lt;/p&gt;&#xA;&lt;p&gt;It does&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Image Gallery</title>
-      <link>http://localhost:1313/gallery/</link>
-      <pubDate>Sat, 25 Jun 2022 18:35:46 +0530</pubDate>
-      <guid>http://localhost:1313/gallery/</guid>
-      <description></description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Luigi</title><link>https://lexsus100.github.io/</link><description>Recent content on Luigi</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Fri, 09 Dec 2022 19:53:33 +0530</lastBuildDate><atom:link href="https://lexsus100.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>Idk what Im doing</title><link>https://lexsus100.github.io/blog/example_random/</link><pubDate>Fri, 09 Dec 2022 19:53:33 +0530</pubDate><guid>https://lexsus100.github.io/blog/example_random/</guid><description>&lt;h3 id="theres-no-way-that-this-is-gonna-work"&gt;There&amp;rsquo;s no way that this is gonna work&lt;/h3&gt;
+&lt;p&gt;But I guess it does&lt;/p&gt;</description></item><item><title>Render Math With Mathjax</title><link>https://lexsus100.github.io/blog/math/</link><pubDate>Fri, 09 Dec 2022 19:53:33 +0530</pubDate><guid>https://lexsus100.github.io/blog/math/</guid><description>&lt;h2 id="mathjax"&gt;Mathjax&lt;/h2&gt;
+&lt;p&gt;This is my edited version let&amp;rsquo;s see if changes&lt;/p&gt;
+&lt;p&gt;It does&lt;/p&gt;</description></item></channel></rss>
