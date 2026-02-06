@@ -227,7 +227,7 @@ params:
             featuredItems:
               fontAwesomeIcons:
                 - icon: fa-solid fa-id-card
-                  # url: "mailto:luigi.casagrande@outlook.it"
+                  url: "/lifeguard-certification"
                   tooltip: Valid Lifeguard Certification
           - name: "Pool Lifeguard"
             date: "Jul 2021 - Aug 2022"
@@ -306,11 +306,17 @@ params:
         content: |-
           Specialization in **Engineering Application**.
 
-          Relevant coursework:
+          Relevant courseworks:
             - Metallic Materials and Product Innovation
             - Composite Materials for Structural Applications
             - Life Cycle Assessment
             - Materials for Energy Applications
+
+          A limited selection of **lecture notes** from this period is available <a href="/archive/academic_projects-polimi/">here</a>.
+
+          🎓 **Master's Thesis ➝ Solid-State Aluminium Recycling**  
+          Experimental investigation of **solid-state aluminium recycling** via roll bonding, analysing the influence of process parameters on microstructure, mechanical properties, and hardness to assess feasibility and material behavior.
+
         featuredLink:
           enable: true
           name: Master Thesis (WIP)
@@ -325,12 +331,12 @@ params:
         content: |-
           *"World Wide Exchange Program"* offered by *Politecnico di Milano*, with academic activities focused on project-based work and applied use of theoretical concepts.
 
-          Relevant coursework:
+          Relevant courseworks:
             - Multiscale Materials Modelling
             - Advanced Bio-Functional Materials
             - Smart Polymeric Materials
           
-          A selection of projects completed during this exchange period is available <a href="/archive/academic_projects-sjtu/">here</a>.
+          A selection of **projects** completed during this exchange period is available <a href="/archive/academic_projects-sjtu/">here</a>.
           
       - title: "Bachelor's Degree · Materials Engineering & Nanotechnology"
         school:
@@ -339,15 +345,18 @@ params:
         date: Sep 2020 - Jul 2023
         final_grade: 93 out of 110
         content: |-
-          Relevant coursework:
+          Relevant courseworks:
             - Steelmaking
             - CAD Modelling
             - Data Analysis and Experimental Methods
             - Structural Mechanics
 
+          🧪 **Bachelor's Thesis ➝ Printed Device for Energy Storage (Group Project)**  
+          Development and characterization of a printed energy-storage device, focusing on **gel-based electrolytes** to optimize energy density, ionic conductivity (non-electronic transport), and mechanical resistance for improved overall performance.
+
         featuredLink:
           enable: true
-          name: Bachelor Thesis (Group Project)
+          name: Bachelor Thesis
           url: pdf/PoliMi_Luigi-Bachelor_Thesis.pdf
 
       - title: Exchange Student · STEM subjects
@@ -467,7 +476,7 @@ params:
       enable: false
       disableFeaturedImage: true
     socialNetworks:
-      # github: https://github.com/lexsus100
+      github: https://github.com/lexsus100
       linkedin: https://www.linkedin.com/in/luigi-casagrande/
       # twitter: https://twitter.com
       # instagram: https://instagram.com

@@ -4,4 +4,10 @@ They are standard coursework projects, shared mainly for reference and documenta
 &lt;hr&gt;
 &lt;h4 id="modeling-the-melting-behaviour-of-pure-ni-zr-and-ni-zr-alloys"&gt;Modeling the Melting Behaviour of Pure Ni, Zr, and Ni-Zr Alloys&lt;/h4&gt;
 &lt;p&gt;This project explores &lt;strong&gt;melting&lt;/strong&gt; and &lt;strong&gt;phase transitions&lt;/strong&gt; in &lt;strong&gt;pure Ni&lt;/strong&gt;, &lt;strong&gt;Zr&lt;/strong&gt;, and selected &lt;strong&gt;Ni-Zr intermetallic compounds&lt;/strong&gt; using molecular dynamics simulations (LAMMPS).&lt;br&gt;
-The work was carried out as part of a multiscale materials modelling course and focuses on atomistic-level analysis of thermal behaviour.&lt;/p&gt;</description></item></channel></rss>
+The work was carried out as part of a multiscale materials modelling course and focuses on atomistic-level analysis of thermal behaviour.&lt;/p&gt;</description></item><item><title>Academic Lecture | PoliMi</title><link>https://luigicasagrande.it/archive/academic_projects-polimi/</link><pubDate>Thu, 05 Feb 2026 00:00:00 +0000</pubDate><guid>https://luigicasagrande.it/archive/academic_projects-polimi/</guid><description>&lt;p&gt;This page collects a small, non-exhaustive selection of lecture notes developed during my &lt;strong&gt;Master’s thesis&lt;/strong&gt; at &lt;em&gt;Politecnico di Milano&lt;/em&gt;.&lt;br&gt;
+The material shown here is intentionally &lt;em&gt;redacted&lt;/em&gt; and represents only random excerpts from different courses, shared for documentation and reference purposes rather than as complete study material.&lt;/p&gt;
+&lt;p&gt;All notes are written in &lt;strong&gt;LaTeX&lt;/strong&gt;, with a focus on clarity, mathematical rigour, and engineering relevance.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h4 id="failure-of-metals"&gt;Failure of Metals&lt;/h4&gt;
+&lt;p&gt;Notes covering the mechanical failure of metallic materials, from physical mechanisms to engineering models.&lt;br&gt;
+Topics include &lt;strong&gt;embrittlement&lt;/strong&gt;, &lt;strong&gt;fracture mechanics&lt;/strong&gt;, &lt;strong&gt;fatigue&lt;/strong&gt;, &lt;strong&gt;creep&lt;/strong&gt;, and &lt;strong&gt;experimental testing methods&lt;/strong&gt;, with emphasis on failure interpretation and model limitations.&lt;/p&gt;</description></item></channel></rss>

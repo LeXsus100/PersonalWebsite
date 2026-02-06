@@ -7,6 +7,7 @@ tags:
   - materials-science
   - computational-modeling
   - polymer-physics
+  - latex
 image: /images/SJTU_Dormitory.jpg
 description: "University coursework and independent study"
 toc: false
