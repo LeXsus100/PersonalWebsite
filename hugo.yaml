@@ -1,4 +1,4 @@
-baseURL: "https://lexsus100.github.io/PersonalWebsite/"
+baseURL: "https://luigicasagrande.it"
 relativeURLs: true
 canonifyURLs: true
 languageCode: "en-us"
@@ -46,24 +46,29 @@ Menus:
     #   title: Blog posts
     #   url: /gallery
     #   weight: 2
+    - identifier: archive
+      name: Archive
+      title: Archive
+      url: /archive
+      weight: 5
 
     # Dropdown menu
-    - identifier: dropdown
-      title: Explore menu
-      name: Explore
-      weight: 3
+    # - identifier: dropdown
+    #   title: Explore menu
+    #   name: Explore
+    #   weight: 3
     # - identifier: dropdown1
     #   title: Blog
     #   name: Blog
     #   url: /blog  # http://blog.luigicasagrande.test/
     #   parent: dropdown
     #   weight: 2
-    - identifier: dropdown2
-      title: Portfolio
-      name: Portfolio
-      url: /portfolio
-      parent: dropdown
-      weight: 1
+    # - identifier: dropdown2
+    #   title: Portfolio
+    #   name: Portfolio
+    #   url: /portfolio
+    #   parent: dropdown
+    #   weight: 1
 
 params:
   title: Luigi
@@ -292,7 +297,7 @@ params:
     # title: "Custom Name"
     index: false
     items:
-      - title: Master of Science - Materials Engineering & Nanotechnology
+      - title: Master of Science · Materials Engineering & Nanotechnology
         school:
           name: Politecnico di Milano, Italy
           url: https://polimi.it/en/
@@ -311,7 +316,7 @@ params:
           name: Master Thesis (WIP)
           url: pdf/PoliMi_Luigi-Master_Thesis.pdf
 
-      - title: Exchange Student - Materials Engineering
+      - title: Exchange Student · Materials Engineering
         school:
           name: Shanghai Jiao Tong University, China
           url: https://en.sjtu.edu.cn/
@@ -325,7 +330,7 @@ params:
             - Advanced Bio-Functional Materials
             - Smart Polymeric Materials
           
-      - title: "Bachelor's Degree - Materials Engineering & Nanotechnology"
+      - title: "Bachelor's Degree · Materials Engineering & Nanotechnology"
         school:
           name: Politecnico di Milano, Italy
           url: https://polimi.it/en/
@@ -343,7 +348,7 @@ params:
           name: Bachelor Thesis (Group Project)
           url: pdf/PoliMi_Luigi-Bachelor_Thesis.pdf
 
-      - title: Exchange Student - STEM subjects
+      - title: Exchange Student · STEM subjects
         school:
           name: Kawana Waters State College, Australia
           url: https://kawanawaterssc.eq.edu.au/
@@ -376,7 +381,7 @@ params:
   # ====================================== PROJECTS ====================================== #
   projects:
     enable: false
-    # title: "Custom Name"
+    # title: "Portfolio"
     items:
       - title: Hugo Profile
         content: A highly customizable and mobile first Hugo template for personal portfolio and blog.
@@ -408,6 +413,20 @@ params:
         links:
           - icon: fab fa-github
             url: https://github.com/gurusabarish/converter
+
+      - title: Hugo Profile V2
+        content: A clean and simple Hugo template for personal portfolio and blog.
+        image: /images/projects/profile2.jpg
+        featured:
+          name: Demo V2
+          link: https://hugo-profile-2.netlify.app
+        badges:
+          - "Hugo"
+          - "Bootstrap"
+          - "Javascript"
+        links:
+          - icon: fab fa-github
+            url: https://github.com/gurusabarish/HugoProfileV2
 
       - title: Hugo Profile V2
         content: A clean and simple Hugo template for personal portfolio and blog.
