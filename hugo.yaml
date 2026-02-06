@@ -210,9 +210,9 @@ params:
       - company: None
         companyUrl: ""
         jobs:
-          - name: Lfw # Job Title
+          - name: LFW # Job Title
             date: Ready
-            content: Looking for work
+            content: Graduating in March 2026 - Looking for work
             info:
               content: Yep, still empty # Synthetic explanation
 
@@ -329,6 +329,8 @@ params:
             - Multiscale Materials Modelling
             - Advanced Bio-Functional Materials
             - Smart Polymeric Materials
+          
+          A selection of projects completed during this exchange period is available <a href="/archive/academic_projects-sjtu/">here</a>.
           
       - title: "Bachelor's Degree · Materials Engineering & Nanotechnology"
         school:
