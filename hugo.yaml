@@ -227,7 +227,7 @@ params:
             featuredItems:
               fontAwesomeIcons:
                 - icon: fa-solid fa-id-card
-                  url: "mailto:luigi.casagrande@outlook.it"
+                  # url: "mailto:luigi.casagrande@outlook.it"
                   tooltip: Valid Lifeguard Certification
           - name: "Pool Lifeguard"
             date: "Jul 2021 - Aug 2022"
