@@ -1,4 +1,6 @@
 baseURL: "https://lexsus100.github.io/PersonalWebsite/"
+relativeURLs: true
+canonifyURLs: true
 languageCode: "en-us"
 title: "Luigi"
 theme: "hugo-profile"
