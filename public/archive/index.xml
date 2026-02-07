@@ -1,13 +1,26 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Archive on Luigi</title><link>https://luigicasagrande.it/archive/</link><description>Recent content in Archive on Luigi</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Fri, 06 Feb 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://luigicasagrande.it/archive/index.xml" rel="self" type="application/rss+xml"/><item><title>Academic Projects | SJTU</title><link>https://luigicasagrande.it/archive/academic_projects-sjtu/</link><pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate><guid>https://luigicasagrande.it/archive/academic_projects-sjtu/</guid><description>&lt;p&gt;This page presents a small selection of projects completed during my exchange program in Shanghai.&lt;br&gt;
-They are standard coursework projects, shared mainly for reference and documentation purposes.&lt;/p&gt;
-&lt;p&gt;Everything here is written in LaTeX; I describe my setup and workflow in a separate article available here: &lt;a href="../latex-setup.md"&gt;LaTeX Setup&lt;/a&gt;.&lt;/p&gt;
-&lt;hr&gt;
-&lt;h4 id="modeling-the-melting-behaviour-of-pure-ni-zr-and-ni-zr-alloys"&gt;Modeling the Melting Behaviour of Pure Ni, Zr, and Ni-Zr Alloys&lt;/h4&gt;
-&lt;p&gt;This project explores &lt;strong&gt;melting&lt;/strong&gt; and &lt;strong&gt;phase transitions&lt;/strong&gt; in &lt;strong&gt;pure Ni&lt;/strong&gt;, &lt;strong&gt;Zr&lt;/strong&gt;, and selected &lt;strong&gt;Ni-Zr intermetallic compounds&lt;/strong&gt; using molecular dynamics simulations (LAMMPS).&lt;br&gt;
-The work was carried out as part of a multiscale materials modelling course and focuses on atomistic-level analysis of thermal behaviour.&lt;/p&gt;</description></item><item><title>Academic Lecture | PoliMi</title><link>https://luigicasagrande.it/archive/academic_projects-polimi/</link><pubDate>Thu, 05 Feb 2026 00:00:00 +0000</pubDate><guid>https://luigicasagrande.it/archive/academic_projects-polimi/</guid><description>&lt;p&gt;This page collects a small, non-exhaustive selection of lecture notes developed during my &lt;strong&gt;Master’s thesis&lt;/strong&gt; at &lt;em&gt;Politecnico di Milano&lt;/em&gt;.&lt;br&gt;
-The material shown here is intentionally &lt;em&gt;redacted&lt;/em&gt; and represents only random excerpts from different courses, shared for documentation and reference purposes rather than as complete study material.&lt;/p&gt;
-&lt;p&gt;All notes are written in &lt;strong&gt;LaTeX&lt;/strong&gt;, with a focus on clarity, mathematical rigour, and engineering relevance.&lt;/p&gt;
-&lt;hr&gt;
-&lt;h4 id="failure-of-metals"&gt;Failure of Metals&lt;/h4&gt;
-&lt;p&gt;Notes covering the mechanical failure of metallic materials, from physical mechanisms to engineering models.&lt;br&gt;
-Topics include &lt;strong&gt;embrittlement&lt;/strong&gt;, &lt;strong&gt;fracture mechanics&lt;/strong&gt;, &lt;strong&gt;fatigue&lt;/strong&gt;, &lt;strong&gt;creep&lt;/strong&gt;, and &lt;strong&gt;experimental testing methods&lt;/strong&gt;, with emphasis on failure interpretation and model limitations.&lt;/p&gt;</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Archive on Luigi</title>
+    <link>http://localhost:1313/archive/</link>
+    <description>Recent content in Archive on Luigi</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 06 Feb 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/archive/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Academic Projects | SJTU</title>
+      <link>http://localhost:1313/archive/academic_projects-sjtu/</link>
+      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/archive/academic_projects-sjtu/</guid>
+      <description>&lt;p&gt;This page presents a small selection of projects completed during my exchange program in Shanghai.&lt;br&gt;&#xA;They are standard coursework projects, shared mainly for reference and documentation purposes.&lt;/p&gt;&#xA;&lt;p&gt;Everything here is written in LaTeX; I describe my setup and workflow in a separate article available here: &lt;a href=&#34;../latex-setup.md&#34;&gt;LaTeX Setup&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h4 id=&#34;modeling-the-melting-behaviour-of-pure-ni-zr-and-ni-zr-alloys&#34;&gt;Modeling the Melting Behaviour of Pure Ni, Zr, and Ni-Zr Alloys&lt;/h4&gt;&#xA;&lt;p&gt;This project explores &lt;strong&gt;melting&lt;/strong&gt; and &lt;strong&gt;phase transitions&lt;/strong&gt; in &lt;strong&gt;pure Ni&lt;/strong&gt;, &lt;strong&gt;Zr&lt;/strong&gt;, and selected &lt;strong&gt;Ni-Zr intermetallic compounds&lt;/strong&gt; using molecular dynamics simulations (LAMMPS).&lt;br&gt;&#xA;The work was carried out as part of a multiscale materials modelling course and focuses on atomistic-level analysis of thermal behaviour.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Academic Lectures | PoliMi</title>
+      <link>http://localhost:1313/archive/academic_projects-polimi/</link>
+      <pubDate>Thu, 05 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/archive/academic_projects-polimi/</guid>
+      <description>&lt;p&gt;This page collects a small, non-exhaustive selection of lecture notes developed during my &lt;strong&gt;Master’s thesis&lt;/strong&gt; at &lt;em&gt;Politecnico di Milano&lt;/em&gt;.&lt;br&gt;&#xA;The material shown here is intentionally &lt;em&gt;redacted&lt;/em&gt; and represents only random excerpts from different courses, shared for documentation and reference purposes rather than as complete study material.&lt;/p&gt;&#xA;&lt;p&gt;All notes are written in &lt;strong&gt;LaTeX&lt;/strong&gt;, with a focus on clarity, mathematical rigour, and engineering relevance.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h4 id=&#34;failure-of-metals&#34;&gt;Failure of Metals&lt;/h4&gt;&#xA;&lt;p&gt;Notes covering the mechanical failure of metallic materials, from physical mechanisms to engineering models.&lt;br&gt;&#xA;Topics include &lt;strong&gt;embrittlement&lt;/strong&gt;, &lt;strong&gt;fracture mechanics&lt;/strong&gt;, &lt;strong&gt;fatigue&lt;/strong&gt;, &lt;strong&gt;creep&lt;/strong&gt;, and &lt;strong&gt;experimental testing methods&lt;/strong&gt;, with emphasis on failure interpretation and model limitations.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

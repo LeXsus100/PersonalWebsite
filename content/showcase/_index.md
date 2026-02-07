@@ -1,5 +1,5 @@
 ---
-title: "Archive"
+title: "Showcase"
 date: 2026-02-06
 draft: false
 author: "Luigi"

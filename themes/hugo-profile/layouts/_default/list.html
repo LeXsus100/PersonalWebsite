@@ -24,10 +24,10 @@
                     {{ end }}
                     <div class="card-body bg-transparent p-4 shadow-sm">
                         <a href="{{ .RelPermalink }}" class="primary-font card-title">
-                            <h5 class="card-title bg-transparent" title="{{ .Title }}">{{ .Title | truncate 25 }}</h5>
+                            <h5 class="card-title bg-transparent" title="{{ .Title }}">{{ .Title | truncate 60 }}</h5>
                         </a>
                         <div class="card-text secondary-font">
-                            <p>{{ .Summary | truncate 150}}</p>
+                            <p>{{ .Summary | truncate 100}}</p>
                         </div>
                     </div>
                     <div class="mt-auto post-footer bg-transparent py-3">

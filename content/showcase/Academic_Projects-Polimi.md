@@ -1,5 +1,5 @@
 ---
-title: "Academic Lecture | PoliMi"
+title: "Academic Lectures | PoliMi"
 date: 2026-02-05
 draft: false
 author: "Luigi"

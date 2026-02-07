@@ -46,29 +46,24 @@ Menus:
     #   title: Blog posts
     #   url: /gallery
     #   weight: 2
-    - identifier: archive
-      name: Archive
-      title: Archive
-      url: /archive
-      weight: 5
-
+    
     # Dropdown menu
-    # - identifier: dropdown
-    #   title: Explore menu
-    #   name: Explore
-    #   weight: 3
-    # - identifier: dropdown1
-    #   title: Blog
-    #   name: Blog
-    #   url: /blog  # http://blog.luigicasagrande.test/
+    - identifier: dropdown
+      title: Explore menu
+      name: Explore
+      weight: 5
+    - identifier: dropdown1
+      name: Showcase
+      title: Showcase
+      url: /showcase
+      parent: dropdown
+      weight: 1
+    # - identifier: dropdown2
+    #   title: Thoughts
+    #   name: Thoughts
+    #   url: /thoughts
     #   parent: dropdown
     #   weight: 2
-    # - identifier: dropdown2
-    #   title: Portfolio
-    #   name: Portfolio
-    #   url: /portfolio
-    #   parent: dropdown
-    #   weight: 1
 
 params:
   title: Luigi
@@ -177,30 +172,36 @@ params:
     title: "About Me"
     # image: "/images/me.png"
     content: |
-      I *(almost)* hold a master's degree in **Materials Engineering**, but my professional and personal path has never followed a single, linear track. I have always been **driven by challenges**, especially those that require discipline, curiosity, and the **willingness to step outside my comfort zone**.
+      I *(almost)* hold a master's degree in **Materials Engineering**, but my professional and personal path has never followed a single, linear track. I have always been **driven by challenges**, especially those that require **perseverance**, **curiosity**, and the **willingness** to step outside my comfort zone.
 
-      Alongside my academic background, I have pursued **competitive swimming** at an agonistic level, studied **piano** with formal examinations at a conservatory, and continuously tested myself through **mathematics competitions**.  
-      I have lived and studied abroad, including experiences in **Australia** and **China**, and completed a **sailing course** with the Italian Navy, each of these shaping the way I approach problems, teamwork, and long-term goals.
+      Alongside my academic path, I was engaged in **competitive swimming**, completed a **sailing course** with the Italian Navy, and **studied piano** with formal conservatory examinations, among other pursuits. 
+      I also took part in **academic competitions** and **tutoring** activities, and worked small summer jobs.  
+      These experiences collectively strengthened my **discipline**, **reliability**, and ability to **work with others** toward structured objectives.
+       
+      I have also lived and **studied abroad**, with longer stays in **Australia** and **China** and shorter study periods in **London**, **New York**, and **Lyon**.  
+      Exposure to different educational settings and everyday environments **broadened my perspective** and familiarity with diverse cultures and ways of thinking.
 
-      Behind the scenes, I am deeply interested in technology, computer science, personal finance, and, more broadly, any topic that helps me understand systems, patterns, and what lies beyond the immediate horizon (including theology, geopolitics, and strategic games).  
-      I value continuous learning and take a disciplined, serious approach to what I do.
+      Outside my formal studies, I spend a good deal of time exploring **technology** and **computer science**, along with **personal finance** and other fields that help me understand how complex systems behave.  
+      That curiosity also extends to areas like **geopolitics**, **theology**, and **strategic games**.  
+      I tend to approach my work with **consistency** and **discipline**, and I value learning as an ongoing, practical habit rather than a separate activity.
 
       ---
       
-      🔸**Programming & Scripting**  
-      Python · LaTeX · JavaScript · C++ · HTML/CSS
-
-      🔸**Data Analysis & Productivity Tools**  
-      Microsoft Office (Word, Excel, PowerPoint, Access) · Power BI · JMP Pro
-
-      🔸**Engineering Design & Simulation Software**  
-      Autodesk Inventor · SolidWorks · Abaqus FEA · COMSOL Multiphysics
-
-      🔸**Technical & Scientific Computing Environments**  
+      🔸**Programming & Scripting:**  
+      Python · LaTeX · JavaScript · C++ · HTML/CSS  
+      🔸**Data Analysis & Productivity Tools:**  
+      Microsoft Office (Word, Excel, PowerPoint, Access) · Power BI · JMP Pro  
+      🔸**Engineering Design & Simulation Software:**  
+      Autodesk Inventor · SolidWorks · Abaqus FEA · COMSOL Multiphysics  
+      🔸**Technical & Scientific Computing Environments:**  
       Linux (Debian) · openLCA · LAMMPS · MATLAB
 
+      ---
+
       **Languages:**  
-      🔹Italian *(native)* 🔹English *(fluent)* 🔹French *(intermediate)* 🔹Chinese *(beginner)*
+      ✦ Italian *(native)* ✦ English *(fluent)* ✦ French *(intermediate)* ✦ Chinese *(beginner)*  
+      **Certifications:**  
+      <i class='fa-solid fa-certificate'></i> IELTS Academic (CEFR C1 - English) · 2023
     
   # ====================================== EXPERIENCE ====================================== #
   experience:
@@ -303,16 +304,16 @@ params:
           url: https://polimi.it/en/
         date: Sep 2023 - Mar 2026
         final_grade: ?? out of 110
-        content: |-
+        content: |
           Specialisation in **Engineering Application**.
 
-          Relevant courseworks:
-            - Metallic Materials and Product Innovation
-            - Composite Materials for Structural Applications
-            - Life Cycle Assessment
-            - Materials for Energy Applications
+          **Relevant coursework:**  
+            ◆ Metallic Materials and Product Innovation  
+            ◆ Materials for Energy Applications  
+            ◆ Composite Materials for Structural Applications  
+            ◆ Life Cycle Assessment
 
-          A limited selection of **lecture notes** from this period is available <a href="/archive/academic_projects-polimi/">here</a>.
+          A limited selection of **lecture notes** from this period is available <a href="/showcase/academic_projects-polimi/">here⤴</a>.
 
           🎓 **Master's Thesis ➝ Solid-State Aluminium Recycling**  
           Experimental investigation of **solid-state aluminium recycling** via roll bonding, analysing the influence of process parameters on microstructure, mechanical properties, and hardness to assess feasibility and material behaviour.
@@ -320,7 +321,7 @@ params:
         featuredLink:
           enable: true
           name: Master Thesis (WIP)
-          url: pdf/PoliMi_Luigi-Master_Thesis.pdf
+          # url: pdf/PoliMi_Luigi-Master_Thesis.pdf
 
       - title: Exchange Student · Materials Engineering
         school:
@@ -328,15 +329,15 @@ params:
           url: https://en.sjtu.edu.cn/
         date: Sep 2024 - Feb 2025
         GPA: 3.8 out of 4.0
-        content: |-
+        content: |
           *"World Wide Exchange Program"* offered by *Politecnico di Milano*, with academic activities focused on project-based work and applied use of theoretical concepts.
 
-          Relevant courseworks:
-            - Multiscale Materials Modelling
-            - Advanced Bio-Functional Materials
-            - Smart Polymeric Materials
-          
-          A selection of **projects** completed during this exchange period is available <a href="/archive/academic_projects-sjtu/">here</a>.
+          **Relevant coursework:**  
+            ★ Multiscale Materials Modelling  
+            ★ Advanced Bio-Functional Materials  
+            ★ Smart Polymeric Materials
+
+          A selection of **projects** completed during this exchange period is available <a href="/showcase/academic_projects-sjtu/">here⤴</a>.
           
       - title: "Bachelor's Degree · Materials Engineering & Nanotechnology"
         school:
@@ -344,15 +345,15 @@ params:
           url: https://polimi.it/en/
         date: Sep 2020 - Jul 2023
         final_grade: 93 out of 110
-        content: |-
-          Relevant courseworks:
-            - Steelmaking
-            - CAD Modelling
-            - Data Analysis and Experimental Methods
-            - Structural Mechanics
+        content: |
+          **Relevant coursework:**  
+            ● Steelmaking  
+            ● CAD Modelling  
+            ● Data Analysis and Experimental Methods  
+            ● Structural Mechanics
 
           🧪 **Bachelor's Thesis ➝ Printed Device for Energy Storage (Group Project)**  
-          Development and characterization of a printed energy-storage device, focusing on **gel-based electrolytes** to optimize energy density, ionic conductivity, and mechanical resistance for improved overall performance.
+          Development and characterization of a printed energy-storage device, focusing on **gel-based electrolytes** to optimise energy density, ionic conductivity, and mechanical resistance for improved overall performance.
 
         featuredLink:
           enable: true
@@ -365,7 +366,7 @@ params:
           url: https://kawanawaterssc.eq.edu.au/
         date: Jul 2016 - Sep 2016
         content: |-
-          Independent study term during High School
+          One term abroad. Enrolled in regular curriculum alongside local students and hosted by a local family.
 
   # ====================================== ACHIEVEMENTS ====================================== #
   achievements:
@@ -470,9 +471,9 @@ params:
 
   footer:
     recentPosts:
-      path: "blog"
+      path: "showcase"
       count: 3
-      title: Recent Posts
+      title: Showcase
       enable: false
       disableFeaturedImage: true
     socialNetworks:
@@ -480,6 +481,7 @@ params:
       linkedin: https://www.linkedin.com/in/luigi-casagrande/
       # twitter: https://twitter.com
       # instagram: https://instagram.com
+      # facebook: https://instagram.com
 
   # List pages like blogs and posts
   listPages:
