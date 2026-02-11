@@ -172,7 +172,7 @@ params:
     title: "About Me"
     # image: "/images/me.png"
     content: |
-      I *(almost)* hold a master's degree in **Materials Engineering**, but my professional and personal path has never followed a single, linear track. I have always been **driven by challenges**, especially those that require **perseverance**, **curiosity**, and the **willingness** to step outside my comfort zone.
+      I'm a Master’s student in **Materials Engineering** (currently completing my degree), but my professional and personal path has never followed a single, linear track. I have always been **driven by challenges**, especially those that require **perseverance**, **curiosity**, and the **willingness** to step outside my comfort zone.
 
       Alongside my academic path, I was engaged in **competitive swimming**, completed a **sailing course** with the Italian Navy, and **studied piano** with formal conservatory examinations, among other pursuits. 
       I also took part in **academic competitions** and **tutoring** activities, and worked small summer jobs.  
@@ -198,10 +198,12 @@ params:
 
       ---
 
-      **Languages:**  
-      ✦ Italian *(native)* ✦ English *(fluent)* ✦ French *(intermediate)* ✦ Chinese *(beginner)*  
-      **Certifications:**  
-      <i class='fa-solid fa-certificate'></i> IELTS Academic (CEFR C1 - English) · 2023
+      🔷 **Languages:**  
+      · Italian *(native)* · English *(fluent)*  
+      · French *(intermediate)* · Chinese *(beginner)*  
+      
+      🔵 **Certifications:**  
+      · IELTS Academic (CEFR C1 - English) | 2023
     
   # ====================================== EXPERIENCE ====================================== #
   experience:
@@ -213,7 +215,7 @@ params:
         jobs:
           - name: Looking for work # Job Title
             date: Ready
-            content: Graduating in March 2026
+            content: Graduating in July 2026
             info:
               content: Yep, still empty # Synthetic explanation
 
@@ -302,7 +304,7 @@ params:
         school:
           name: Politecnico di Milano, Italy
           url: https://polimi.it/en/
-        date: Sep 2023 - Mar 2026
+        date: Sep 2023 - Jul 2026
         final_grade: ?? out of 110
         content: |
           Specialisation in **Engineering Application**.
