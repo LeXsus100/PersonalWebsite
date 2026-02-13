@@ -320,3 +320,31 @@
 }
 
 /* Singlepage scroll progress end */
+
+/* Back to Showcase button */
+.showcase-back {
+  margin-top: 0.75rem;
+}
+
+.showcase-back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  width: 100%;
+  padding: 0.55rem 0.75rem;
+  border-radius: 10px;
+  text-decoration: none;
+
+  /* tweak these to match your theme */
+  background: rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  color: inherit;
+
+  transition: all 0.18s ease;
+}
+
+.showcase-back-btn:hover {
+  color: var(--text-color);
+  background: rgba(0, 0, 0, 0.08);
+  text-decoration: none;
+}

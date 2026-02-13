@@ -156,10 +156,10 @@ params:
       url: pdf/LuigiCasagrande_Public-CV.pdf
       download: false
       newPage: true
-    # socialLinks:
-    #   fontAwesomeIcons:
-    #     - icon: fab fa-linkedin
-    #       url: https://www.linkedin.com/in/luigi-casagrande/
+    socialLinks:
+      fontAwesomeIcons:
+        - icon: fab fa-linkedin
+          url: https://www.linkedin.com/in/luigi-casagrande/
         # - icon: fab fa-x-twitter
         #   url: https://example.com
       # customIcons:
@@ -315,7 +315,7 @@ params:
             ◆ Composite Materials for Structural Applications  
             ◆ Life Cycle Assessment
 
-          A limited selection of **lecture notes** from this period is available <a href="/showcase/academic_projects-polimi/">here⤴</a>.
+          A limited selection of **lecture notes** from this period is available <a href="/showcase/academic_projects-polimi/">here</a>.
 
           🎓 **Master's Thesis ➝ Solid-State Aluminium Recycling**  
           Experimental investigation of **solid-state aluminium recycling** via roll bonding, analysing the influence of process parameters on microstructure, mechanical properties, and hardness to assess feasibility and material behaviour.
@@ -339,7 +339,7 @@ params:
             ★ Advanced Bio-Functional Materials  
             ★ Smart Polymeric Materials
 
-          A selection of **projects** completed during this exchange period is available <a href="/showcase/academic_projects-sjtu/">here⤴</a>.
+          A selection of **projects** completed during this exchange period is available <a href="/showcase/academic_projects-sjtu/">here</a>.
           
       - title: "Bachelor's Degree · Materials Engineering & Nanotechnology"
         school:
@@ -505,7 +505,7 @@ params:
     read: "Read"
     toc: "Table Of Contents"
     copyright: "All rights reserved"
-    pageNotFound: " "
+    pageNotFound: "The server is just as confused as you are."
     emailText: "Check out this site"
 
   datesFormat:

@@ -53,3 +53,11 @@ Notes on surface-related phenomena and treatments used to tailor material perfor
 Covered subjects include **friction** and **lubrication**, **chromium** and **zinc plating**, **advanced coatings**, and industrial applications.
 
 - 📄 **Lecture Notes:** [PDF](/pdf/PoliMi/Surface_Engineering_public.pdf)
+---
+
+#### Metallic Materials and Product Innovation
+
+Notes examining how advanced metallic systems enable new product functionalities, linking materials science fundamentals with engineering design opportunities.  
+Topics include **shape memory alloys**, **superconductivity**, **thermoelectricity**, **bio-compatible alloys**, **additive manufacturing** of metals, **nano-composites**, and **high-entropy alloys (HEA)**, with emphasis on property-structure-processing relationships and innovation potential.
+
+- 📄 **Lecture Notes:** [PDF](/pdf/PoliMi/Metallic_Materials_Innovation_public.pdf)

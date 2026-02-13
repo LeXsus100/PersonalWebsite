@@ -5,7 +5,7 @@ draft: false
 author: "Luigi"
 tags:
   - materials-science
-  - computational-modeling
+  - computational-modelling
   - polymer-physics
   - latex
 image: /images/SJTU_Dormitory.jpg
