@@ -383,6 +383,239 @@ body[data-bs-theme="dark"] .hero-scroll-down:focus-visible {
     width: 100%;
 }
 
+/* ---------- About: Skills (scoped so it doesn't affect other lists) ---------- */
+
+#about hr {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    border: none;
+    height: 1px;
+    background: linear-gradient(
+        to right,
+        transparent,
+        var(--primary-color),
+        transparent
+    );
+    opacity: 0.35;
+}
+
+#about .about-skill-card {
+    border-radius: 16px;                 /* rounded card */
+    border: 1px solid rgba(148, 163, 184, 0.20); /* subtle border */
+    background: var(--background-color); /* uses your theme variable */
+    box-shadow: 0px 8px 24px rgba(15, 23, 42, 0.08);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+#about .about-skill-card:hover {
+    transform: translateY(-1px);
+    background: rgba(127, 127, 127, 0.10);
+    box-shadow: 0px 14px 34px rgba(15, 23, 42, 0.14);
+}
+
+#about .skills-category {
+    font-weight: 700;                    /* bold category title */
+    margin-bottom: 0.75rem;
+    color: var(--text-secondary-color);
+    letter-spacing: 0.02em;
+}
+
+/* IMPORTANT: override your global #about ul grid for skills only */
+#about ul.skills-list {
+    display: block;                      /* kill the grid */
+    grid-template-columns: none;
+    gap: 0;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    overflow: visible;
+}
+
+/* skills list items + bullets */
+#about ul.skills-list li {
+    margin-bottom: 0.4rem;
+    padding-left: 18px;
+    position: relative;
+    opacity: 0.95;
+}
+
+/* custom marker (single marker only) */
+#about ul.skills-list li::before {
+    content: "▶";
+    color: var(--primary-color);
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 0.5rem;
+}
+
+/* Divider styling in About section (optional) */
+#about hr {
+    border-color: rgba(148, 163, 184, 0.35);
+    opacity: 1;
+}
+
+/* -------- Skills list: adaptive two-column layout -------- */
+
+#about ul.skills-list {
+    column-count: 1;
+    column-gap: 28px;
+}
+
+/* activate two columns when card becomes wide enough */
+@media (min-width: 768px) {
+    #about ul.skills-list {
+        column-count: 2;
+    }
+}
+
+/* prevent items breaking across columns */
+#about ul.skills-list li {
+    break-inside: avoid;
+    -webkit-column-break-inside: avoid;
+    page-break-inside: avoid;
+}
+
+/* -------------------- About: Languages + Certifications -------------------- */
+#about #about-languages .about-meta {
+    max-width: 820px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* shared card style (same surface logic as your skills) */
+#about #about-languages .about-meta-card {
+    border-radius: 16px;
+    border: 1px solid rgba(148, 163, 184, 0.20);
+    background: var(--background-color);
+    box-shadow: 0px 8px 24px rgba(15, 23, 42, 0.08);
+    transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+}
+
+#about #about-languages .about-meta-card:hover {
+    transform: translateY(-1px);
+    background: rgba(127, 127, 127, 0.10);
+    box-shadow: 0px 14px 34px rgba(15, 23, 42, 0.14);
+}
+
+/* titles */
+#about #about-languages .about-meta-title {
+    font-weight: 700;
+    font-size: 1.08rem;
+    color: var(--text-secondary-color);
+    letter-spacing: 0.02em;
+}
+
+/* -------------------- Languages: pills -------------------- */
+
+#about #about-languages .about-language-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+#about #about-languages .lang-pill {
+    display: inline-flex;
+    gap: 8px;
+    align-items: baseline;
+
+    padding: 8px 10px;
+    border-radius: 10px;
+    border: 1px solid rgba(148, 163, 184, 0.20);
+    background: var(--background-color);
+
+    box-shadow: 0px 4px 12px rgba(15, 23, 42, 0.06);
+    transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+}
+
+#about #about-languages .lang-pill:hover {
+    transform: translateY(-1px);
+    background: rgba(127, 127, 127, 0.10);
+    box-shadow: 0 10px 24px rgba(15, 23, 42, 0.14);
+}
+
+#about #about-languages .lang-name {
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+#about #about-languages .lang-dot {
+    opacity: 0.55;
+    font-size: 0.9rem;
+    transform: translateY(-1px);
+}
+
+#about #about-languages .lang-level {
+    font-size: 0.92rem;
+    opacity: 0.85;
+    color: var(--text-secondary-color);
+    font-style: italic;
+}
+
+/* -------------------- Certifications: list -------------------- */
+
+#about #about-languages .about-cert-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#about #about-languages .cert-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 8px;
+
+    padding: 10px 12px;
+    border-radius: 10px;
+    border: 1px solid rgba(148, 163, 184, 0.20);
+    background: var(--background-color);
+
+    box-shadow: 0px 4px 12px rgba(15, 23, 42, 0.06);
+    transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+}
+
+#about #about-languages .cert-row:hover {
+    transform: translateY(-1px);
+    background: rgba(127, 127, 127, 0.10);
+    box-shadow: 0px 10px 24px rgba(15, 23, 42, 0.14);
+}
+
+#about #about-languages .cert-lang {
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+#about #about-languages .cert-arrow {
+    color: var(--primary-color);
+    font-weight: 700;
+    opacity: 0.95;
+}
+
+#about #about-languages .cert-name {
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+#about #about-languages .cert-meta {
+    color: var(--text-secondary-color);
+    opacity: 0.9;
+}
+
+#about #about-languages .cert-sep {
+    opacity: 0.6;
+    margin: 0 2px;
+}
+
+/* responsive tightening */
+@media (max-width: 575.98px) {
+    #about #about-languages .cert-row {
+        gap: 6px;
+        padding: 10px 10px;
+    }
+}
+
+
 /* experience */
 
 #experience h3 {

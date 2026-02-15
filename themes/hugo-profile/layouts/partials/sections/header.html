@@ -205,4 +205,35 @@
             </div>
         </div>
     </nav>
+    <script>
+        document.addEventListener('click', function (e) {
+        const el = e.target.closest('#navbarContent a.nav-link, #navbarContent .dropdown-item');
+        if (!el) return;
+
+        // If it's the dropdown toggle (the thing that opens the submenu), do NOT collapse
+        if (el.classList.contains('dropdown-toggle') || el.getAttribute('data-bs-toggle') === 'dropdown') {
+            return;
+        }
+
+        const navbarCollapse = document.getElementById('navbarContent');
+        if (!navbarCollapse) return;
+
+        // Only on mobile / when currently shown
+        if (navbarCollapse.classList.contains('show')) {
+            const bsCollapse = bootstrap.Collapse.getOrCreateInstance(navbarCollapse);
+            bsCollapse.hide();
+        }
+        });
+    </script>
+
+    <script>
+        function setHeaderOffset() {
+            const header = document.getElementById("profileHeader");
+            if (!header) return;
+            document.documentElement.style.setProperty("--header-offset", (header.offsetHeight + 8) + "px");
+        }
+        window.addEventListener("load", setHeaderOffset);
+        window.addEventListener("resize", setHeaderOffset);
+    </script>
+
 </header>

@@ -12,14 +12,85 @@
             {{ end }}
             <div class="col-sm-12 col-md-12 col-lg-8 content">
                 {{ .Site.Params.about.content | markdownify }}
-
+                
                 {{ if .Site.Params.about.skills.enable }}
-                {{ .Site.Params.about.skills.title }}
-                <ul>
-                    {{ range .Site.Params.about.skills.items }}
-                    <li>{{ . | markdownify }}</li>
-                    {{ end }}
-                </ul>
+                    <hr class="my-4">  <!-- Divider after about content -->
+                    <div class="about-skills">
+                        {{ if .Site.Params.about.skills.title }}
+                        <h4 class="skills-title mb-3 text-center">{{ .Site.Params.about.skills.title }}</h4>
+                        {{ end }}
+
+                        <div class="row g-3">
+                        {{ range .Site.Params.about.skills.groups }}
+                            <div class="col-12 col-md-6">
+                            <div class="card about-skill-card h-100">
+                                <div class="card-body">
+                                <h6 class="card-title skills-category">{{ .name }}</h6>
+
+                                <ul class="skills-list">
+                                    {{ range .items }}
+                                    <li>{{ . | markdownify }}</li>
+                                    {{ end }}
+                                </ul>
+                                </div>
+                            </div>
+                            </div>
+                        {{ end }}
+                        </div>
+                    </div>
+                {{ end }}
+
+                {{ if or (.Site.Params.about.languages.enable) (.Site.Params.about.certifications.enable) }}
+                <hr class="my-4">
+                <section id="about-languages" class="py-0">
+                    <div class="about-meta">
+                    <div class="row g-3 justify-content-center">
+
+                        {{ if .Site.Params.about.languages.enable }}
+                        <div class="col-12 col-sm-10 col-md-8 col-lg-6">
+                            <div class="card about-meta-card about-lang-card h-100">
+                            <div class="card-body">
+                                <h6 class="about-meta-title mb-3">{{ .Site.Params.about.languages.title }}</h6>
+
+                                <div class="about-language-pills">
+                                {{ range .Site.Params.about.languages.items }}
+                                    <span class="lang-pill">
+                                    <span class="lang-name">{{ .name }}</span>
+                                    <span class="lang-dot" aria-hidden="true">·</span>
+                                    <span class="lang-level">{{ .level }}</span>
+                                    </span>
+                                {{ end }}
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                        {{ end }}
+
+                        {{ if .Site.Params.about.certifications.enable }}
+                        <div class="col-12 col-sm-10 col-md-8 col-lg-6">
+                            <div class="card about-meta-card about-cert-card h-100">
+                            <div class="card-body">
+                                <h6 class="about-meta-title mb-3">{{ .Site.Params.about.certifications.title }}</h6>
+
+                                <div class="about-cert-list">
+                                {{ range .Site.Params.about.certifications.items }}
+                                    <div class="cert-row">
+                                    <span class="cert-lang">{{ .language }}</span>
+                                    <span class="cert-arrow" aria-hidden="true">»</span>
+                                    <span class="cert-name">{{ .name }}</span>
+                                    <span class="cert-meta">
+                                        ({{ .detail }}) <span class="cert-sep" aria-hidden="true">·</span> {{ .year }}
+                                    </span>
+                                    </div>
+                                {{ end }}
+                                </div>
+
+                            </div>
+                            </div>
+                        </div>
+                        {{ end }}
+                    </div>
+                    </div>
                 {{ end }}
             </div>
         </div>

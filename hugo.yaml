@@ -134,7 +134,7 @@ params:
       disableExperience: false
       disableEducation: false
       disableProjects: false
-      disableAchievements: false
+      disableAchievements: true
       disableContact: false
 
   # ====================================== FRONT PAGE ====================================== #
@@ -144,8 +144,7 @@ params:
     title: Luigi
     subtitle: I turn curiosity into competence
     content: |
-      An engineer by training, a lifelong learner by choice.<br>
-      Curious about finance, geopolitics, cybersecurity and who knows what's next?
+      An engineer by training, a lifelong learner by choice.
     image: /images/robot_holding_a_pink_flower_and_observing_it.jpg
     # bottomImage:
     #   enable: true
@@ -172,38 +171,72 @@ params:
     title: "About Me"
     # image: "/images/me.png"
     content: |
-      I'm a Master’s student in **Materials Engineering** (currently completing my degree), but my professional and personal path has never followed a single, linear track. I have always been **driven by challenges**, especially those that require **perseverance**, **curiosity**, and the **willingness** to step outside my comfort zone.
+      I'm a Master’s student in **Materials Engineering** (currently completing my degree), but my professional and personal path has never followed a single, linear track. I have always been **driven by challenges**, especially those that require **perseverance**, **curiosity**, and the **willingness** to step outside my comfort zone.  
+      I tend to approach my work with **consistency** and **discipline**, and I value learning as an ongoing, practical habit rather than a separate activity.
 
       Alongside my academic path, I was engaged in **competitive swimming**, completed a **sailing course** with the Italian Navy, and **studied piano** with formal conservatory examinations, among other pursuits. 
-      I also took part in **academic competitions** and **tutoring** activities, and worked small summer jobs.  
+      I also took part in **academic competitions** and **tutoring** activities, and worked small summer jobs, mainly as a lifeguard.  
       These experiences collectively strengthened my **discipline**, **reliability**, and ability to **work with others** toward structured objectives.
        
       I have also lived and **studied abroad**, with longer stays in **Australia** and **China** and shorter study periods in **London**, **New York**, and **Lyon**.  
       Exposure to different educational settings and everyday environments **broadened my perspective** and familiarity with diverse cultures and ways of thinking.
 
-      Outside my formal studies, I spend a good deal of time exploring **technology** and **computer science**, along with **personal finance** and other fields that help me understand how complex systems behave.  
-      That curiosity also extends to areas like **geopolitics**, **theology**, and **strategic games**.  
-      I tend to approach my work with **consistency** and **discipline**, and I value learning as an ongoing, practical habit rather than a separate activity.
+      On a more personal note, I'm mostly into **programming** and **tech**, but I tend to drift into anything that helps me understand how systems behave: **finance**, **geopolitics**, **theology**, **strategy games**, and whatever else I stumble into next.  
+      I like connecting ideas across fields more than sticking to just one.
 
-      ---
-      
-      🔸**Programming & Scripting:**  
-      Python · LaTeX · JavaScript · C++ · HTML/CSS  
-      🔸**Data Analysis & Productivity Tools:**  
-      Microsoft Office (Word, Excel, PowerPoint, Access) · Power BI · JMP Pro  
-      🔸**Engineering Design & Simulation Software:**  
-      Autodesk Inventor · SolidWorks · Abaqus FEA · COMSOL Multiphysics  
-      🔸**Technical & Scientific Computing Environments:**  
-      Linux (Debian) · openLCA · LAMMPS · MATLAB
+    skills:
+      enable: true
+      title: "Skills"
+      groups:
+        - name: "⌨️ Programming & Scripting"
+          items:
+            - "Python"
+            - "LaTeX"
+            - "JavaScript"
+            - "C++"
+            - "HTML/CSS"
 
-      ---
+        - name: "📈 Data Analysis & Productivity Tools"
+          items:
+            - "Microsoft Office"
+            - "Power BI"
+            - "JMP Pro"
 
-      🔷 **Languages:**  
-      · Italian *(native)* · English *(fluent)*  
-      · French *(intermediate)* · Chinese *(beginner)*  
-      
-      🔵 **Certifications:**  
-      · IELTS Academic (CEFR C1 - English) | 2023
+        - name: "⚙️ Engineering Design & Simulation Software"
+          items:
+            - "Autodesk Inventor"
+            - "SolidWorks"
+            - "Abaqus FEA"
+            - "COMSOL Multiphysics"
+
+        - name: "🖥️ Technical & Scientific Computing Environments"
+          items:
+            - "Linux (Debian)"
+            - "openLCA"
+            - "LAMMPS"
+            - "MATLAB"
+
+    languages:
+      enable: true
+      title: "🌍 Languages"
+      items:
+        - name: "Italian"
+          level: "native"
+        - name: "English"
+          level: "fluent"
+        - name: "French"
+          level: "intermediate"
+        - name: "Chinese"
+          level: "beginner"
+
+    certifications:
+      enable: true
+      title: "📜 Certifications"
+      items:
+        - language: "English"
+          name: "IELTS Academic"
+          detail: "CEFR C1"
+          year: "2023"
     
   # ====================================== EXPERIENCE ====================================== #
   experience:
@@ -310,10 +343,10 @@ params:
           Specialisation in **Engineering Application**.
 
           **Relevant coursework:**  
-            ◆ Metallic Materials and Product Innovation  
-            ◆ Materials for Energy Applications  
-            ◆ Composite Materials for Structural Applications  
-            ◆ Life Cycle Assessment
+            ⦁ Metallic Materials and Product Innovation  
+            ⦁ Materials for Energy Applications  
+            ⦁ Composite Materials for Structural Applications  
+            ⦁ Life Cycle Assessment
 
           A limited selection of **lecture notes** from this period is available <a href="/showcase/academic_projects-polimi/">here</a>.
 
@@ -335,9 +368,9 @@ params:
           *"World Wide Exchange Program"* offered by *Politecnico di Milano*, with academic activities focused on project-based work and applied use of theoretical concepts.
 
           **Relevant coursework:**  
-            ★ Multiscale Materials Modelling  
-            ★ Advanced Bio-Functional Materials  
-            ★ Smart Polymeric Materials
+            ‣ Multiscale Materials Modelling  
+            ‣ Advanced Bio-Functional Materials  
+            ‣ Smart Polymeric Materials
 
           A selection of **projects** completed during this exchange period is available <a href="/showcase/academic_projects-sjtu/">here</a>.
           
@@ -349,10 +382,10 @@ params:
         final_grade: 93 out of 110
         content: |
           **Relevant coursework:**  
-            ● Steelmaking  
-            ● CAD Modelling  
-            ● Data Analysis and Experimental Methods  
-            ● Structural Mechanics
+            – Steelmaking  
+            – CAD Modelling  
+            – Data Analysis and Experimental Methods  
+            – Structural Mechanics
 
           🧪 **Bachelor's Thesis ➝ Printed Device for Energy Storage (Group Project)**  
           Development and characterization of a printed energy-storage device, focusing on **gel-based electrolytes** to optimise energy density, ionic conductivity, and mechanical resistance for improved overall performance.
