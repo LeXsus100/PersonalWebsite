@@ -46,18 +46,23 @@ Menus:
     #   title: Blog posts
     #   url: /gallery
     #   weight: 2
-    
-    # Dropdown menu
-    - identifier: dropdown
-      title: Explore menu
-      name: Explore
-      weight: 5
-    - identifier: dropdown1
+    - identifier: showcase
       name: Showcase
       title: Showcase
       url: /showcase
-      parent: dropdown
       weight: 1
+    
+    # Dropdown menu
+    # - identifier: dropdown
+    #   title: Explore menu
+    #   name: Explore
+    #   weight: 5
+    # - identifier: dropdown1
+    #   name: Showcase
+    #   title: Showcase
+    #   url: /showcase
+    #   parent: dropdown
+    #   weight: 1
     # - identifier: dropdown2
     #   title: Thoughts
     #   name: Thoughts
@@ -171,18 +176,28 @@ params:
     title: "About Me"
     # image: "/images/me.png"
     content: |
-      I'm a Master’s student in **Materials Engineering** (currently completing my degree), but my professional and personal path has never followed a single, linear track. I have always been **driven by challenges**, especially those that require **perseverance**, **curiosity**, and the **willingness** to step outside my comfort zone.  
-      I tend to approach my work with **consistency** and **discipline**, and I value learning as an ongoing, practical habit rather than a separate activity.
+      I’m a Master’s student in **Materials Engineering**, close to finishing my degree.  
+      My path hasn’t really followed a straight line and I never tried to force it to. I usually move toward whatever looks difficult enough to keep me interested, and I tend to stick with things for a long time once I start them.  
+      I prefer steady effort over bursts of motivation *(actually true)*, and I treat learning as something you do daily, not something separated from the rest of life.
 
-      Alongside my academic path, I was engaged in **competitive swimming**, completed a **sailing course** with the Italian Navy, and **studied piano** with formal conservatory examinations, among other pursuits. 
-      I also took part in **academic competitions** and **tutoring** activities, and worked small summer jobs, mainly as a lifeguard.  
-      These experiences collectively strengthened my **discipline**, **reliability**, and ability to **work with others** toward structured objectives.
+      Outside university I spent many years in **competitive swimming** and studying **piano**, both with regular training and formal commitments. I also attended a **sailing course** with the Italian Navy, took part in a few **academic competitions**, did **tutoring**, and worked summer seasons as a **lifeguard**.  
+      I’ve always liked environments where people rely on each other and where showing up prepared actually matters.
        
-      I have also lived and **studied abroad**, with longer stays in **Australia** and **China** and shorter study periods in **London**, **New York**, and **Lyon**.  
-      Exposure to different educational settings and everyday environments **broadened my perspective** and familiarity with diverse cultures and ways of thinking.
+      I’ve lived and studied abroad as well, with longer periods in **Australia** and **China** and shorter ones in UK, USA, and France. What I actually enjoy is the *contrast*: different cultures, landscapes, food, and religions.  
+      I like being immersed in places where my usual references don’t apply, setting aside what I’m used to and trying to look at things with a new, unfiltered perspective.
 
-      On a more personal note, I'm mostly into **programming** and **tech**, but I tend to drift into anything that helps me understand how systems behave: **finance**, **geopolitics**, **theology**, **strategy games**, and whatever else I stumble into next.  
-      I like connecting ideas across fields more than sticking to just one.
+      Recently most of my free time goes into programming and technical projects.  
+      I’m building a *"not so small"* home server based on Debian with a UniFi setup and I’m learning self-hosting along the way. I’ve also been working on a few personal websites (as this one), mostly as a way to understand how systems fit together rather than just using ready-made platforms.
+      
+      I originally learned **LaTeX** simply because I liked how it looked, and at some point it replaced Word entirely: from my second year of university onward every set of notes, report, and assignment has been written in it.  
+      **Python** started as a tool for financial data back-testing while studying personal finance and gradually became part of my everyday workflow; now I use it for analysis, plots, small utilities, and anything repetitive enough to automate.  
+      I could probably continue for quite a while.
+
+      In general I’m curious about systems more than specific fields, so I end up reading about **finance**, **geopolitics**, **theology**, **strategy games**, and whatever else catches my attention.  
+      I like linking ideas together more than specializing early.
+
+      I’m also very Italian about food: **pizza** is easily my favourite.  
+      And I like **dogs**, and animals in general: they feel straightforward in a way people rarely are.
 
     skills:
       enable: true
@@ -538,7 +553,7 @@ params:
     read: "Read"
     toc: "Table Of Contents"
     copyright: "All rights reserved"
-    pageNotFound: "The server is just as confused as you are."
+    pageNotFound: " "
     emailText: "Check out this site"
 
   datesFormat:
