@@ -194,7 +194,7 @@ params:
       I could probably continue for quite a while.
 
       In general I’m curious about systems more than specific fields, so I end up reading about **finance**, **geopolitics**, **theology**, **strategy games**, and whatever else catches my attention.  
-      I like linking ideas together more than specializing early.
+      I like linking ideas together more than specialising early.
 
       I’m also very Italian about food: **pizza** is easily my favourite.  
       And I like **dogs**, and animals in general: they feel straightforward in a way people rarely are.
@@ -278,7 +278,7 @@ params:
             featuredItems:
               fontAwesomeIcons:
                 - icon: fa-solid fa-id-card
-                  url: "/lifeguard-certification"
+                  # url: "/lifeguard-certification"
                   tooltip: Valid Lifeguard Certification
           - name: "Pool Lifeguard"
             date: "Jul 2021 - Aug 2022"

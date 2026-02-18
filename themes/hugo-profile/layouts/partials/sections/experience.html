@@ -70,17 +70,32 @@
                                                     <div class="featuredLink list-inline d-flex justify-content-end align-items-center">
                                                         {{ range $job.featuredItems.fontAwesomeIcons }}
                                                             <div class="list-inline-item">
-                                                                <a
-                                                                    href="{{ .url }}"
-                                                                    target="_blank"
-                                                                    {{ if .tooltip}}
-                                                                        data-bs-toggle="tooltip" 
-                                                                        data-bs-placement="top" 
-                                                                        data-bs-original-title={{.tooltip}}
-                                                                    {{ end }}
-                                                                >
-                                                                    <i class="{{ .icon }}"></i>
-                                                                </a>
+
+                                                                {{ if .url }}
+                                                                    <a
+                                                                        href="{{ .url }}"
+                                                                        target="_blank"
+                                                                        {{ with .tooltip }}
+                                                                            data-bs-toggle="tooltip"
+                                                                            data-bs-placement="top"
+                                                                            title="{{ . }}"
+                                                                        {{ end }}
+                                                                    >
+                                                                        <i class="{{ .icon }}"></i>
+                                                                    </a>
+                                                                {{ else }}
+                                                                    <span
+                                                                        class="non-clickable-icon"
+                                                                        {{ with .tooltip }}
+                                                                            data-bs-toggle="tooltip"
+                                                                            data-bs-placement="top"
+                                                                            title="{{ . }}"
+                                                                        {{ end }}
+                                                                    >
+                                                                        <i class="{{ .icon }}"></i>
+                                                                    </span>
+                                                                {{ end }}
+
                                                             </div>
                                                         {{ end }}
                                                         {{ range $job.featuredItems.customIcons }}

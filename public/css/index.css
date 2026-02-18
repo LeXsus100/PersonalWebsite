@@ -187,6 +187,19 @@ header .navbar.animate {
     width: 100%;
 }
 
+@media (min-width: 800px) and (max-width: 1399.98px) {
+  #hero .image img {
+    max-width: 380px;
+    transform: translateX(-10%);
+  }
+}
+@media (min-width: 1400px) {
+  #hero .image img {
+    max-width: 520px;
+    transform: translateX(-15%);
+  }
+}
+
 /* --- HERO: scroll-down button --- */
 .hero-scroll-down {
   position: absolute;
@@ -742,6 +755,18 @@ body[data-bs-theme="dark"] .hero-scroll-down:focus-visible {
     color: var(--text-color) !important;
     opacity: 0.7;
 }
+
+.non-clickable-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: --primary-color;
+}
+
+.non-clickable-icon i {
+    cursor: default;
+}
+
 
 /* Education */
 
