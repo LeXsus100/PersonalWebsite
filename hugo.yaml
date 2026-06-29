@@ -18,7 +18,7 @@ outputs:
     - "HTML"
     - "RSS"
 
-enableRobotsTXT: true
+enableRobotsTXT: false
 
 #services:
   #googleAnalytics:
@@ -27,7 +27,7 @@ enableRobotsTXT: true
     #shortname: your-disqus-shortname
 
 pagination:
-  pagerSize: 3
+  pagerSize: 9
 
 markup:
   goldmark:
@@ -36,20 +36,10 @@ markup:
 
 Menus:
   main:
-    # - identifier: blog
-    #   name: Blog
-    #   title: Blog posts
-    #   url: https://blog.luigicasagrande.it
-    #   weight: 1
-    # - identifier: gallery
-    #   name: Gallery
-    #   title: Blog posts
-    #   url: /gallery
-    #   weight: 2
-    - identifier: showcase
-      name: Showcase
-      title: Showcase
-      url: /showcase
+    - identifier: blog
+      name: Blog
+      title: Blog
+      url: /blog
       weight: 1
     
     # Dropdown menu
@@ -72,7 +62,7 @@ Menus:
 
 params:
   title: Luigi
-  description: Yes, this is My Website
+  description: My Personal Space on the Internet
   # staticPath: ""  # The path to serve the static files from
   favicon: "/fav.png"
 
@@ -147,9 +137,9 @@ params:
     enable: true
     intro: Hi, my name is
     title: Luigi
-    subtitle: I turn curiosity into competence
+    subtitle: Manufacturing Engineer
     content: |
-      An engineer by training, a lifelong learner by choice.
+      I turn curiosity into competence.
     image: /images/robot_holding_a_pink_flower_and_observing_it.jpg
     # bottomImage:
     #   enable: true
@@ -176,9 +166,9 @@ params:
     title: "About Me"
     # image: "/images/me.png"
     content: |
-      I’m a Master’s student in **Materials Engineering**, close to finishing my degree.  
-      My path hasn’t really followed a straight line and I never tried to force it to. I usually move toward whatever looks difficult enough to keep me interested, and I tend to stick with things for a long time once I start them.  
-      I prefer steady effort over bursts of motivation *(actually true)*, and I treat learning as something you do daily, not something separated from the rest of life.
+      I (almost) hold a Master’s degree in **Materials Engineering and Nanotechnology**.  
+      My path hasn’t really followed a straight line and I’ve never felt the need to make it look that way. I tend to move toward things that challenge me and push me to think more deeply.  
+      I’m more **consistent** than impulsive. I prefer steady progress over short bursts of motivation, and I see learning as something that fits into everyday life rather than something separate from it.
 
       Outside university I spent many years in **competitive swimming** and studying **piano**, both with regular training and formal commitments. I also attended a **sailing course** with the Italian Navy, took part in a few **academic competitions**, did **tutoring**, and worked summer seasons as a **lifeguard**.  
       I’ve always liked environments where people rely on each other and where showing up prepared actually matters.
@@ -187,7 +177,7 @@ params:
       I like being immersed in places where my usual references don’t apply, setting aside what I’m used to and trying to look at things with a new, unfiltered perspective.
 
       Recently most of my free time goes into programming and technical projects.  
-      I’m building a *"not so small"* home server based on Debian with a UniFi setup and I’m learning self-hosting along the way. I’ve also been working on a few personal websites (as this one), mostly as a way to understand how systems fit together rather than just using ready-made platforms.
+      I’m building a *"not so small"* home server based on Debian with a UniFi setup. I’ve also been working on a few personal websites (as this one), mostly as a way to understand how systems fit together rather than just using ready-made platforms.
       
       I originally learned **LaTeX** simply because I liked how it looked, and at some point it replaced Word entirely: from my second year of university onward every set of notes, report, and assignment has been written in it.  
       **Python** started as a tool for financial data back-testing while studying personal finance and gradually became part of my everyday workflow; now I use it for analysis, plots, small utilities, and anything repetitive enough to automate.  
@@ -196,8 +186,8 @@ params:
       In general I’m curious about systems more than specific fields, so I end up reading about **finance**, **geopolitics**, **theology**, **strategy games**, and whatever else catches my attention.  
       I like linking ideas together more than specialising early.
 
-      I’m also very Italian about food: **pizza** is easily my favourite.  
-      I like **dogs** and animals in general; they feel straightforward in a way people rarely are.
+      Outside of that, I’m very Italian about food: **pizza** is easily my favourite.  
+      I also like **dogs** and animals in general; they tend to be straightforward in a way people rarely are.
 
     skills:
       enable: true
@@ -210,23 +200,26 @@ params:
             - "JavaScript"
             - "C++"
             - "HTML/CSS"
+            - "SQL"
 
         - name: "📈 Data Analysis & Productivity Tools"
           items:
             - "Microsoft Office"
             - "Power BI"
             - "JMP Pro"
+            - "SAP"
+            - "MES"
 
         - name: "⚙️ Engineering Design & Simulation Software"
           items:
             - "Autodesk Inventor"
             - "SolidWorks"
             - "Abaqus FEA"
-            - "COMSOL Multiphysics"
+            - "COMSOL"
 
-        - name: "🖥️ Technical & Scientific Computing Environments"
+        - name: "🖥️ Technical Computing Environments"
           items:
-            - "Linux (Debian)"
+            - "GNU/Linux"
             - "openLCA"
             - "LAMMPS"
             - "MATLAB"
@@ -253,96 +246,62 @@ params:
           detail: "CEFR C1"
           year: "2023"
     
+    
   # ====================================== EXPERIENCE ====================================== #
+
   experience:
     enable: true
     # title: "Custom Name"
     items:
-      - company: None
-        companyUrl: ""
+      - company: EssilorLuxottica
+        companyUrl: https://www.essilorluxottica.com/
         jobs:
-          - name: Looking for work # Job Title
-            date: Ready
-            content: Graduating in July 2026
+          - name: Production Engineer Intern # Job Title
+            date: April 2026 - Current
             info:
-              content: Yep, still empty # Synthetic explanation
+              content: Raw Material Production Engineer Intern # Synthetic explanation
+            content: |
+              Mainly focused on understanding manufacturing processes, identifying their critical points, and developing digital and standardised solutions to make them more efficient, stable, and easier to manage.
 
-      - company: "Aquatic Facilities"
-        companyUrl: "https://www.quantaclub.com/"
+              * Worked on the acetate temples production flow, analysing the process, identifying critical areas, and supporting practical improvement actions.
+              * Analysed production KPIs such as OEE, downtime, and scrap rate to understand inefficiencies and support Lean Manufacturing initiatives.
+              * Designed and implemented digital tools, data workflows, and department standards using Python, SQL, and Java to improve and standardise production management.
+
+            featuredItems:
+              fontAwesomeIcons:
+                - icon: fas fa-location-dot
+                  tooltip: Sedico, Belluno
+
+      - company: Aquatic Facilities
+        companyUrl: https://www.quantaclub.com/
         jobs:
-          - name: "Certified Pool Lifeguard"
-            date: "Jul 2022 - Sep 2023"
-            content: "Lifeguard duties in public swimming pools, ensuring swimmer safety and regulatory compliance."
+          - name: Certified Pool Lifeguard
+            date: Jul 2022 - Sep 2023
             info:
               content: Quanta Club - Milano, Italy
+            content: Lifeguard duties in public swimming pools, ensuring swimmer safety and regulatory compliance.
             featuredItems:
               fontAwesomeIcons:
                 - icon: fa-solid fa-id-card
-                  # url: "/lifeguard-certification"
-                  tooltip: Valid Lifeguard Certification
-          - name: "Pool Lifeguard"
-            date: "Jul 2021 - Aug 2022"
-            # content: "Lifeguard duties in public swimming pools, ensuring swimmer safety and regulatory compliance."
+                  # url: /lifeguard-certification
+                  tooltip: Lifeguard Certification
+              # customIcons:
+                  # - icon: /fav.png
+                  # url: "https://example.com"
+          - name: Pool Lifeguard
+            date: Jul 2021 - Aug 2022
+            # content: Lifeguard duties in public swimming pools, ensuring swimmer safety and regulatory compliance.
             info:
               content: Quanta Club - Milano, Italy
-          - name: "Pool Lifeguard"
-            date: "Jun 2017 - Sep 2017"
-            # content: "Lifeguard duties in public swimming pools, ensuring swimmer safety and regulatory compliance."
+          - name: Pool Lifeguard
+            date: Jun 2017 - Sep 2017
+            # content: Lifeguard duties in public swimming pools, ensuring swimmer safety and regulatory compliance.
             info:
               content: Natatorium Treviso - Treviso, Italy
 
-      # - company: "Amazon"
-      #   companyUrl: "https://example.com"
-      #   jobs:
-      #     - name: "Software Developer"
-      #       date: "Sep 2020 - Dec 2021"
-      #       info:
-      #         content: I worked as a software developer for more than one year in Amazon.
-      #       content: |
-      #         I am currently working as a software developer at [example org.](https://example.com) in San Francisco, CA. I am currently working on a project that will be used to help people find the best way to get around the city.
-
-      #         - Lead backend developer for a product.
-      #         - Created a frontend design for a product.
-
-      # - company: "Apple"
-      #   companyUrl: "https://example.com"
-      #   jobs: 
-      #   - name: "Junior Software Developer"
-      #     date: "Jan 2020 - Aug 2020"
-      #     featuredItems:
-      #       fontAwesomeIcons:
-      #         - icon: fa-brands fa-react
-      #           url: https://react.dev/
-      #         - icon: fab fa-x-twitter
-      #           url: https://example.com
-      #       customIcons:
-      #         - icon: /fav.png
-      #           url: "https://example.com"
-      #     content: |
-      #       I am currently working as a software developer at [example org.](https://example.com) in San Francisco, CA. I am currently working on a project that will be used to help people find the best way to get around the city.
-
-      #       - Lead backend developer for a product.
-      #       - Created a frontend design for a product.
-
-      # - company: "Netflix"
-      #   companyUrl: "https://example.com"
-      #   jobs:
-      #   - name: "UI/UX Designer"
-      #     date: "June 2017 - Nov 2019"
-      #     content: |
-      #       I am currently working as a software developer at [example org.](https://example.com) in San Francisco, CA. I am currently working on a project that will be used to help people find the best way to get around the city.
-
-      #       - Lead backend developer for a product.
-      #       - Created a frontend design for a product.
-
-      # - company: "Google"
-      #   companyUrl: "https://example.com"
-      #   jobs:
-      #   - name: "Product Designer"
-      #     date: "Feb 2016 - Mar 2017"
-      #     content: "I am currently working as a software developer at [example org.](https://example.com) in San Francisco, CA. I am currently working on a project that will be used to help people find the best way to get around the city."
 
   # ====================================== EDUCATION ====================================== #
+
   education:
     enable: true
     # title: "Custom Name"
@@ -353,7 +312,7 @@ params:
           name: Politecnico di Milano, Italy
           url: https://polimi.it/en/
         date: Sep 2023 - Jul 2026
-        final_grade: ?? out of 110
+        final_grade: – out of 110
         content: |
           Specialisation in **Engineering Application**.
 
@@ -363,7 +322,7 @@ params:
             ⦁ Composite Materials for Structural Applications  
             ⦁ Life Cycle Assessment
 
-          A limited selection of **lecture notes** from this period is available <a href="/showcase/academic_projects-polimi/">here</a>.
+          A limited selection of **lecture notes** from this period is available <a href="/blog/academic-notes/">here</a>.
 
           🎓 **Master's Thesis ➝ Solid-State Aluminium Recycling**  
           Experimental investigation of **solid-state aluminium recycling** via roll bonding, analysing the influence of process parameters on microstructure, mechanical properties, and hardness to assess feasibility and material behaviour.
@@ -387,7 +346,7 @@ params:
             ‣ Advanced Bio-Functional Materials  
             ‣ Smart Polymeric Materials
 
-          A selection of **projects** completed during this exchange period is available <a href="/showcase/academic_projects-sjtu/">here</a>.
+          A selection of **projects** completed during this exchange period is available <a href="/blog/exchange-projects/">here</a>.
           
       - title: "Bachelor's Degree · Materials Engineering & Nanotechnology"
         school:
@@ -427,82 +386,25 @@ params:
         content: First-place winner of the Italian National Team Mathematics Competition for High Schools, organized by the University of Trieste (2017).
         url: https://www.coppaaurea.units.it/divulgazione/olimpia17/
         image: /images/Coppa-Aurea_Winner-2017.jpg
-      # - title: Facebook Hackathon Winner
-      #   content: Developed a product using Artificial Intelligence.
-      #   image: /images/achievement.jpg
-      # - title: Hugo Profile
-      #   content: Developed a theme and getting 1K+ downloads per month.
-      #   url: "https://github.com/gurusabarish/hugo-profile"
-      #   image: /images/achievement.jpg
-      # - title: Microsoft Imagine Runner
-      #   content: We are developed a product which can help others.
-      # - title: Google Summer of Code
-      #   content: Contributed to a open source project.
-      #   url: https://example.com
 
   # ====================================== PROJECTS ====================================== #
   projects:
-    enable: false
+    enable: true
     # title: "Portfolio"
     items:
-      - title: Hugo Profile
-        content: A highly customizable and mobile first Hugo template for personal portfolio and blog.
-        image: /images/projects/profile.png
+      - title: Treviso Mathematics Olympiad Website
+        content: Created and maintain the official website for the Treviso Mathematics Olympiad district, providing updates and resources.
+        image: /images/OlimatTV_logo.png
         featured:
-          name: Demo
-          link: https://hugo-profile.netlify.app
+          name: Go to Website
+          link: https://www.olimat-tv.it/en/
         badges:
-          - "Hugo"
-          - "Bootstrap"
-          - "Javascript"
-        links:
-          - icon: fa fa-envelope
-            url: mailto:?subject=Hugo%20Profile%20Template&body=Check%20it%20out:%20https%3a%2f%2fhugo-profile.netlify.app%2fblog%2fmarkdown-syntax%2f
-          - icon: fab fa-github
-            url: https://github.com/gurusabarish/hugo-profile
-          # - icon: fab fa-twitter
-          #   url: https://twitter.com/intent/tweet?text=Check+it+out:&url=https%3A%2F%2Fgithub.com%2Fgurusabarish%2Fhugo-profile
-
-      - title: Image Converter
-        content: A web app to convert image to pdf, png to jpg, png to jpg and png to webp without database using django.
-        image: /images/projects/converter.jpg
-        featured:
-          name: Demo
-          link: https://django-converter.herokuapp.com
-        badges:
-          - "Django"
-          - "Bootstrap"
+          - "HTML"
+          - "JavaScript"
+          - "Mathematics"
         links:
           - icon: fab fa-github
-            url: https://github.com/gurusabarish/converter
-
-      - title: Hugo Profile V2
-        content: A clean and simple Hugo template for personal portfolio and blog.
-        image: /images/projects/profile2.jpg
-        featured:
-          name: Demo V2
-          link: https://hugo-profile-2.netlify.app
-        badges:
-          - "Hugo"
-          - "Bootstrap"
-          - "Javascript"
-        links:
-          - icon: fab fa-github
-            url: https://github.com/gurusabarish/HugoProfileV2
-
-      - title: Hugo Profile V2
-        content: A clean and simple Hugo template for personal portfolio and blog.
-        image: /images/projects/profile2.jpg
-        featured:
-          name: Demo V2
-          link: https://hugo-profile-2.netlify.app
-        badges:
-          - "Hugo"
-          - "Bootstrap"
-          - "Javascript"
-        links:
-          - icon: fab fa-github
-            url: https://github.com/gurusabarish/HugoProfileV2
+            url: https://github.com/OLIMAT-Treviso/OLIMAT-Treviso.github.io
 
 
   # ====================================== CONTACT ====================================== #

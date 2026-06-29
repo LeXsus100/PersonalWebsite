@@ -18,3 +18,86 @@ body {
 .default-font, #default-font {
     font-family: "Roboto", sans-serif;
 }
+
+/* ==================== BUTTONS ==================== */
+
+.my-btn {
+  display: inline-block;
+  padding: 0.65rem 1.1rem;
+  border-radius: 0.5rem;
+  border: 1px solid transparent;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+/* kill underline */
+a.my-btn,
+a.my-btn:hover,
+a.my-btn:focus,
+a.my-btn:active {
+  text-decoration: none !important;
+}
+
+/* =========================
+   LIGHT MODE
+   ========================= */
+
+.my-btn-primary {
+  background: rgba(0, 123, 255, 0.12);   /* soft blue */
+  border-color: rgba(0, 123, 255, 0.35);
+  color: #0056b3;                        /* darker text for contrast */
+}
+
+.my-btn-primary:hover {
+  background: rgba(0, 123, 255, 0.22);
+  border-color: rgba(0, 123, 255, 0.5);
+  color: #004099;
+}
+
+.my-btn-outline {
+  background: transparent;
+  border-color: rgba(0, 123, 255, 0.4);
+  color: #0056b3;
+}
+
+.my-btn-outline:hover {
+  background: rgba(0, 123, 255, 0.12);
+  border-color: rgba(0, 123, 255, 0.6);
+  color: #004099;
+}
+
+/* =========================
+   DARK MODE
+   ========================= */
+/* adjust selector if your theme uses something else */
+
+.dark .my-btn-primary {
+  background: rgba(100, 181, 246, 0.18);
+  border-color: rgba(100, 181, 246, 0.4);
+  color: #e4e6eb; /* light readable text */
+}
+
+.dark .my-btn-primary:hover {
+  background: rgba(100, 181, 246, 0.28);
+  border-color: rgba(100, 181, 246, 0.6);
+  color: #ffffff;
+}
+
+.dark .my-btn-outline {
+  border-color: rgba(100, 181, 246, 0.5);
+  color: #64b5f6;
+}
+
+.dark .my-btn-outline:hover {
+  background: rgba(100, 181, 246, 0.18);
+  border-color: rgba(100, 181, 246, 0.7);
+  color: #ffffff;
+}
+
+.my-btn {
+  text-decoration: none !important;
+}
+
+.my-btn * {
+  text-decoration: none !important;
+}

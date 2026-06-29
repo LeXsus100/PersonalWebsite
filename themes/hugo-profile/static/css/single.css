@@ -199,6 +199,29 @@
     opacity: 0.8;
 }
 
+/* Show all tag */
+#single .tags-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#single .tags-title {
+  margin: 0;
+}
+
+/* Base button style */
+#single .show-all-tags-link {
+  font-size: 0.75rem;
+  color: var(--primary-color) !important;
+  background-color: var(--secondary-color) !important;
+  padding: 0px 4px;
+  border-radius: 4px;
+  text-decoration: none;
+  border: 1px solid currentColor;
+  transition: all 0.15s ease;
+}
+
 
 /*TOC*/
 #single aside.toc {

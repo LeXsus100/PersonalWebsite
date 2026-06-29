@@ -1,11 +1,11 @@
 ---
 title: "Privacy Policy"
-date: 2026-02-06
+date: 2026-06-21
 draft: false
 author: "Luigi"
 tags: 
     - privacy-policy
-description: "University coursework and independent study"
+description: "Privacy Policy"
 toc: true
 mathjax: true
 ---
@@ -47,7 +47,7 @@ Personal data are processed exclusively for the following purposes:
 - maintaining security and preventing abuse  
 - displaying requested content  
 
-No data are used for marketing, profiling, or behavioral analysis.
+No data are used for marketing, profiling, or behavioural analysis.
 
 ---
 

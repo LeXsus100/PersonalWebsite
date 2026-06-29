@@ -10,6 +10,13 @@
 {{ define "main" }}
 <div class="container pt-5" id="list-page">
     <h2 class="text-center pb-2">{{.Title}}</h2>
+        {{ if not (and (eq .Kind "taxonomy") (eq .Type "tags")) }}
+        <div class="text-center mb-3">
+            <a href="/tags/" class="btn btn-outline-secondary btn-sm">
+                Browse all Tags
+            </a>
+        </div>
+        {{ end }}
     <div class="row">
         {{ range .Paginator.Pages }}
         <div class="col-lg-4 col-md-6 my-3">
@@ -27,11 +34,13 @@
                             <h5 class="card-title bg-transparent" title="{{ .Title }}">{{ .Title | truncate 60 }}</h5>
                         </a>
                         <div class="card-text secondary-font">
-                            <p>{{ .Summary | truncate 100}}</p>
+                            <p>{{ .Summary | truncate 120}}</p>
                         </div>
                     </div>
                     <div class="mt-auto post-footer bg-transparent py-3">
+                        {{ if .Date.IsZero | not }}
                         <span class="float-start bg-transparent">{{ .Date.Format (.Site.Params.datesFormat.articleList | default "January 2, 2006") }}</span>
+                        {{ end }}
                         <a href="{{ .RelPermalink }}" class="float-end btn btn-outline-info btn-sm">{{ .Site.Params.terms.read | default "Read" }}</a>
                     </div>
                 </div>

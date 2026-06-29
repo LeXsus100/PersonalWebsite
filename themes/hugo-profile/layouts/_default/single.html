@@ -56,17 +56,28 @@
           {{ end }}
 
           {{ if .Params.tags }}
-          <aside class="tags">
-            <h5>{{ .Site.Params.terms.tags | default "Tags" }}</h5>
-            <ul class="tags-ul list-unstyled list-inline">
-              {{range .Params.tags}}
-              <li class="list-inline-item"><a href="{{`tags` | absURL}}/{{.| urlize}}"
-                {{ if site.Params.singlePages.tags.openInNewTab | default true }}target="_blank"{{ end }}
-              >{{.}}</a></li>
-              {{end}}
-            </ul>
-          </aside>
-          {{end}}
+            <aside class="tags">
+              <div class="tags-header">
+                <h5 class="tags-title">
+                  {{ .Site.Params.terms.tags | default "Tags" }}
+                </h5>
+                <a href="{{ `tags` | absURL }}" class="show-all-tags-link">
+                  Show all
+                </a>
+              </div>
+
+              <ul class="tags-ul list-unstyled list-inline">
+                {{ range .Params.tags }}
+                <li class="list-inline-item">
+                  <a href="{{ `tags` | absURL }}/{{ . | urlize }}"
+                    {{ if site.Params.singlePages.tags.openInNewTab | default true }}target="_blank"{{ end }}>
+                    {{ . }}
+                  </a>
+                </li>
+                {{ end }}
+              </ul>
+            </aside>
+          {{ end }}
 
           <!-- {{ if .Params.socialShare | default .Site.Params.singlePages.socialShare | default true }}
           <aside class="social">
@@ -100,7 +111,7 @@
 
           {{ if ne .RelPermalink "/privacy/" }}
             <aside class="showcase-back">
-              <a class="showcase-back-btn" href="{{ "/showcase/" | relURL }}">
+              <a class="showcase-back-btn" href="{{ "/blog/" | relURL }}">
                 <i class="fas fa-arrow-left me-2"></i>
                 Browse more
               </a>
