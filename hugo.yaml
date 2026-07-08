@@ -137,7 +137,7 @@ params:
     enable: true
     intro: Hi, my name is
     title: Luigi
-    subtitle: Manufacturing Engineer
+    subtitle: Production Engineer
     content: |
       I turn curiosity into competence.
     image: /images/robot_holding_a_pink_flower_and_observing_it.jpg
@@ -207,7 +207,7 @@ params:
             - "Microsoft Office"
             - "Power BI"
             - "JMP Pro"
-            - "SAP"
+            - "SAP (ERP)"
             - "MES"
 
         - name: "⚙️ Engineering Design & Simulation Software"
@@ -256,10 +256,10 @@ params:
       - company: EssilorLuxottica
         companyUrl: https://www.essilorluxottica.com/
         jobs:
-          - name: Production Engineer Intern # Job Title
+          - name: Raw Production Engineer # Job Title
             date: April 2026 - Current
             info:
-              content: Raw Material Production Engineer Intern # Synthetic explanation
+              content: Internship # Synthetic explanation
             content: |
               Mainly focused on understanding manufacturing processes, identifying their critical points, and developing digital and standardised solutions to make them more efficient, stable, and easier to manage.
 
@@ -270,13 +270,13 @@ params:
             featuredItems:
               fontAwesomeIcons:
                 - icon: fas fa-location-dot
-                  tooltip: Sedico, Belluno
+                  tooltip: Sedico (BL), Italy
 
       - company: Aquatic Facilities
         companyUrl: https://www.quantaclub.com/
         jobs:
-          - name: Certified Pool Lifeguard
-            date: Jul 2022 - Sep 2023
+          - name: Pool Lifeguard
+            date: Jul 2021 - Sep 2023
             info:
               content: Quanta Club - Milano, Italy
             content: Lifeguard duties in public swimming pools, ensuring swimmer safety and regulatory compliance.
@@ -285,19 +285,23 @@ params:
                 - icon: fa-solid fa-id-card
                   # url: /lifeguard-certification
                   tooltip: Lifeguard Certification
+                - icon: fas fa-location-dot
+                  tooltip: Milano (MI), Italy
               # customIcons:
                   # - icon: /fav.png
                   # url: "https://example.com"
           - name: Pool Lifeguard
-            date: Jul 2021 - Aug 2022
-            # content: Lifeguard duties in public swimming pools, ensuring swimmer safety and regulatory compliance.
-            info:
-              content: Quanta Club - Milano, Italy
-          - name: Pool Lifeguard
             date: Jun 2017 - Sep 2017
             # content: Lifeguard duties in public swimming pools, ensuring swimmer safety and regulatory compliance.
             info:
-              content: Natatorium Treviso - Treviso, Italy
+              content: Natatorium Treviso
+            featuredItems:
+              fontAwesomeIcons:
+                - icon: fa-solid fa-id-card
+                  # url: /lifeguard-certification
+                  tooltip: Lifeguard Certification
+                - icon: fas fa-location-dot
+                  tooltip: Treviso (TV), Italy
 
 
   # ====================================== EDUCATION ====================================== #
@@ -329,7 +333,7 @@ params:
 
         featuredLink:
           enable: true
-          name: Master Thesis (WIP)
+          name: Master Thesis (Pending Publication)
           # url: pdf/PoliMi_Luigi-Master_Thesis.pdf
 
       - title: Exchange Student · Materials Engineering
