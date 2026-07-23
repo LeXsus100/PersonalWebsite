@@ -1,24 +1,5 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-	<channel>
-		<title>Italy on Luigi</title>
-		<link>http://localhost:1313/tags/italy/</link>
-		<description>Recent content in Italy on Luigi</description>
-		<generator>Hugo</generator>
-		<language>en-us</language>
-		
-		
-		
-		
-			<lastBuildDate>Thu, 12 Mar 2026 00:00:00 +0000</lastBuildDate>
-		
-			<atom:link href="http://localhost:1313/tags/italy/index.xml" rel="self" type="application/rss+xml" />
-			<item>
-				<title>LaTeX Notes for Politecnico di Milano</title>
-				<link>http://localhost:1313/blog/academic-notes/</link>
-				<pubDate>Thu, 12 Mar 2026 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/blog/academic-notes/</guid>
-				<description>&lt;p&gt;I started using LaTeX in 2020, right at the beginning of my studies at &lt;a href=&#34;https://polimi.it/&#34;&gt;Politecnico di Milano&lt;/a&gt;.&lt;br&gt;&#xA;I was first introduced to it by a PhD student who showed a small group of us the basics; nothing too formal, just enough to get started.&lt;br&gt;&#xA;That was enough to get me interested, and I ended up picking up the rest on my own.&lt;/p&gt;&#xA;&lt;p&gt;My workflow started with &lt;a href=&#34;https://texstudio.org/&#34;&gt;TeXstudio&lt;/a&gt;, but I switched pretty quickly to &lt;a href=&#34;https://code.visualstudio.com/&#34;&gt;Visual Studio Code&lt;/a&gt;, which I still use now.&#xA;I rely on a few extensions (&lt;em&gt;LaTeX Workshop&lt;/em&gt;, &lt;em&gt;LaTeX language support&lt;/em&gt;, and a spell checker) which cover most of what I need without getting in the way.&lt;/p&gt;</description>
-			</item>
-	</channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Italy on Luigi</title><link>https://luigicasagrande.it/tags/italy/</link><description>Recent content in Italy on Luigi</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Thu, 12 Mar 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://luigicasagrande.it/tags/italy/index.xml" rel="self" type="application/rss+xml"/><item><title>LaTeX Notes for Politecnico di Milano</title><link>https://luigicasagrande.it/blog/academic-notes/</link><pubDate>Thu, 12 Mar 2026 00:00:00 +0000</pubDate><guid>https://luigicasagrande.it/blog/academic-notes/</guid><description>&lt;p&gt;I started using LaTeX in 2020, right at the beginning of my studies at &lt;a href="https://polimi.it/"&gt;Politecnico di Milano&lt;/a&gt;.&lt;br&gt;
+I was first introduced to it by a PhD student who showed a small group of us the basics; nothing too formal, just enough to get started.&lt;br&gt;
+That was enough to get me interested, and I ended up picking up the rest on my own.&lt;/p&gt;
+&lt;p&gt;My workflow started with &lt;a href="https://texstudio.org/"&gt;TeXstudio&lt;/a&gt;, but I switched pretty quickly to &lt;a href="https://code.visualstudio.com/"&gt;Visual Studio Code&lt;/a&gt;, which I still use now.
+I rely on a few extensions (&lt;em&gt;LaTeX Workshop&lt;/em&gt;, &lt;em&gt;LaTeX language support&lt;/em&gt;, and a spell checker) which cover most of what I need without getting in the way.&lt;/p&gt;</description></item></channel></rss>

@@ -1,38 +1,21 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-	<channel>
-		<title>Luigi</title>
-		<link>http://localhost:1313/</link>
-		<description>Recent content on Luigi</description>
-		<generator>Hugo</generator>
-		<language>en-us</language>
-		
-		
-		
-		
-			<lastBuildDate>Sun, 21 Jun 2026 00:00:00 +0000</lastBuildDate>
-		
-			<atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
-			<item>
-				<title>Privacy Policy</title>
-				<link>http://localhost:1313/privacy/</link>
-				<pubDate>Sun, 21 Jun 2026 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/privacy/</guid>
-				<description>&lt;h3 id=&#34;1-data-controller&#34;&gt;1. Data Controller&lt;/h3&gt;&#xA;&lt;p&gt;The data controller is &lt;strong&gt;Luigi Casagrande&lt;/strong&gt;, reachable at &lt;strong&gt;&lt;a href=&#34;mailto:luigi.casagrande@outlook.it&#34;&gt;luigi.casagrande@outlook.it&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h3 id=&#34;2-scope-of-this-privacy-policy&#34;&gt;2. Scope of This Privacy Policy&lt;/h3&gt;&#xA;&lt;p&gt;This Privacy Policy describes how personal data are processed when users visit the website &lt;strong&gt;&lt;a href=&#34;https://luigicasagrande.it&#34;&gt;https://luigicasagrande.it&lt;/a&gt;&lt;/strong&gt; (the “Website”).&lt;/p&gt;&#xA;&lt;p&gt;The Website is a &lt;strong&gt;static, informational website&lt;/strong&gt; and does &lt;strong&gt;not&lt;/strong&gt; include forms, newsletters, comment sections, or user accounts.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h3 id=&#34;3-types-of-data-processed&#34;&gt;3. Types of Data Processed&lt;/h3&gt;&#xA;&lt;h4 id=&#34;31-browsing&#34;&gt;3.1 Browsing&lt;/h4&gt;&#xA;&lt;p&gt;During normal operation, the Website and its underlying infrastructure may process the following technical data:&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>Academic Projects at SJTU</title>
-				<link>http://localhost:1313/blog/exchange-projects/</link>
-				<pubDate>Fri, 13 Mar 2026 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/blog/exchange-projects/</guid>
-				<description>&lt;p&gt;During my exchange period at &lt;a href=&#34;https://en.sjtu.edu.cn/&#34;&gt;Shanghai Jiao Tong University&lt;/a&gt;, I completed several coursework projects in materials science.&lt;br&gt;&#xA;Unlike the lecture notes shown &lt;a href=&#34;./blog/academic-notes/#lecture-notes&#34;&gt;here&lt;/a&gt;, these are self-contained studies developed within specific course contexts, specifically with a stronger emphasis on modelling, analysis, or literature review.&lt;/p&gt;&#xA;&lt;p&gt;The documents below are shared as originally submitted, with only minor adjustments where necessary.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;projects&#34;&gt;Projects&lt;/h2&gt;&#xA;&lt;p style=&#34;margin: 30px 0;&#34;&gt;&lt;/p&gt;&#xD;&#xA;&lt;h5 id=&#34;-modelling-the-melting-behaviour-of-pure-ni-zr-and-ni-zr-alloys&#34;&gt;• Modelling the Melting Behaviour of Pure Ni, Zr, and Ni-Zr Alloys&lt;/h5&gt;&#xA;&lt;p&gt;A molecular dynamics study (LAMMPS) of melting and phase transitions in pure Ni, Zr, and Ni-Zr intermetallics, with focus on atomistic-scale thermal behaviour.&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>LaTeX Notes for Politecnico di Milano</title>
-				<link>http://localhost:1313/blog/academic-notes/</link>
-				<pubDate>Thu, 12 Mar 2026 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/blog/academic-notes/</guid>
-				<description>&lt;p&gt;I started using LaTeX in 2020, right at the beginning of my studies at &lt;a href=&#34;https://polimi.it/&#34;&gt;Politecnico di Milano&lt;/a&gt;.&lt;br&gt;&#xA;I was first introduced to it by a PhD student who showed a small group of us the basics; nothing too formal, just enough to get started.&lt;br&gt;&#xA;That was enough to get me interested, and I ended up picking up the rest on my own.&lt;/p&gt;&#xA;&lt;p&gt;My workflow started with &lt;a href=&#34;https://texstudio.org/&#34;&gt;TeXstudio&lt;/a&gt;, but I switched pretty quickly to &lt;a href=&#34;https://code.visualstudio.com/&#34;&gt;Visual Studio Code&lt;/a&gt;, which I still use now.&#xA;I rely on a few extensions (&lt;em&gt;LaTeX Workshop&lt;/em&gt;, &lt;em&gt;LaTeX language support&lt;/em&gt;, and a spell checker) which cover most of what I need without getting in the way.&lt;/p&gt;</description>
-			</item>
-	</channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Luigi</title><link>https://luigicasagrande.it/</link><description>Recent content on Luigi</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Sun, 21 Jun 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://luigicasagrande.it/index.xml" rel="self" type="application/rss+xml"/><item><title>Privacy Policy</title><link>https://luigicasagrande.it/privacy/</link><pubDate>Sun, 21 Jun 2026 00:00:00 +0000</pubDate><guid>https://luigicasagrande.it/privacy/</guid><description>&lt;h3 id="1-data-controller"&gt;1. Data Controller&lt;/h3&gt;
+&lt;p&gt;The data controller is &lt;strong&gt;Luigi Casagrande&lt;/strong&gt;, reachable at &lt;strong&gt;&lt;a href="mailto:luigi.casagrande@outlook.it"&gt;luigi.casagrande@outlook.it&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id="2-scope-of-this-privacy-policy"&gt;2. Scope of This Privacy Policy&lt;/h3&gt;
+&lt;p&gt;This Privacy Policy describes how personal data are processed when users visit the website &lt;strong&gt;&lt;a href="https://luigicasagrande.it"&gt;https://luigicasagrande.it&lt;/a&gt;&lt;/strong&gt; (the “Website”).&lt;/p&gt;
+&lt;p&gt;The Website is a &lt;strong&gt;static, informational website&lt;/strong&gt; and does &lt;strong&gt;not&lt;/strong&gt; include forms, newsletters, comment sections, or user accounts.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id="3-types-of-data-processed"&gt;3. Types of Data Processed&lt;/h3&gt;
+&lt;h4 id="31-browsing"&gt;3.1 Browsing&lt;/h4&gt;
+&lt;p&gt;During normal operation, the Website and its underlying infrastructure may process the following technical data:&lt;/p&gt;</description></item><item><title>Academic Projects at SJTU</title><link>https://luigicasagrande.it/blog/exchange-projects/</link><pubDate>Fri, 13 Mar 2026 00:00:00 +0000</pubDate><guid>https://luigicasagrande.it/blog/exchange-projects/</guid><description>&lt;p&gt;During my exchange period at &lt;a href="https://en.sjtu.edu.cn/"&gt;Shanghai Jiao Tong University&lt;/a&gt;, I completed several coursework projects in materials science.&lt;br&gt;
+Unlike the lecture notes shown &lt;a href="./blog/academic-notes/#lecture-notes"&gt;here&lt;/a&gt;, these are self-contained studies developed within specific course contexts, specifically with a stronger emphasis on modelling, analysis, or literature review.&lt;/p&gt;
+&lt;p&gt;The documents below are shared as originally submitted, with only minor adjustments where necessary.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="projects"&gt;Projects&lt;/h2&gt;
+&lt;p style="margin: 30px 0;"&gt;&lt;/p&gt;
+&lt;h5 id="-modelling-the-melting-behaviour-of-pure-ni-zr-and-ni-zr-alloys"&gt;• Modelling the Melting Behaviour of Pure Ni, Zr, and Ni-Zr Alloys&lt;/h5&gt;
+&lt;p&gt;A molecular dynamics study (LAMMPS) of melting and phase transitions in pure Ni, Zr, and Ni-Zr intermetallics, with focus on atomistic-scale thermal behaviour.&lt;/p&gt;</description></item><item><title>LaTeX Notes for Politecnico di Milano</title><link>https://luigicasagrande.it/blog/academic-notes/</link><pubDate>Thu, 12 Mar 2026 00:00:00 +0000</pubDate><guid>https://luigicasagrande.it/blog/academic-notes/</guid><description>&lt;p&gt;I started using LaTeX in 2020, right at the beginning of my studies at &lt;a href="https://polimi.it/"&gt;Politecnico di Milano&lt;/a&gt;.&lt;br&gt;
+I was first introduced to it by a PhD student who showed a small group of us the basics; nothing too formal, just enough to get started.&lt;br&gt;
+That was enough to get me interested, and I ended up picking up the rest on my own.&lt;/p&gt;
+&lt;p&gt;My workflow started with &lt;a href="https://texstudio.org/"&gt;TeXstudio&lt;/a&gt;, but I switched pretty quickly to &lt;a href="https://code.visualstudio.com/"&gt;Visual Studio Code&lt;/a&gt;, which I still use now.
+I rely on a few extensions (&lt;em&gt;LaTeX Workshop&lt;/em&gt;, &lt;em&gt;LaTeX language support&lt;/em&gt;, and a spell checker) which cover most of what I need without getting in the way.&lt;/p&gt;</description></item></channel></rss>
