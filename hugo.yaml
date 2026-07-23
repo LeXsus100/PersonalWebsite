@@ -139,7 +139,7 @@ params:
     title: Luigi
     subtitle: Production Engineer
     content: |
-      I turn curiosity into competence.
+      Curious by default, consistent by choice, and always building something I didn’t know how to build yesterday.
     image: /images/robot_holding_a_pink_flower_and_observing_it.jpg
     # bottomImage:
     #   enable: true
@@ -166,7 +166,7 @@ params:
     title: "About Me"
     # image: "/images/me.png"
     content: |
-      I (almost) hold a Master’s degree in **Materials Engineering and Nanotechnology**.  
+      I hold a Master’s degree in **Materials Engineering and Nanotechnology**.  
       My path hasn’t really followed a straight line and I’ve never felt the need to make it look that way. I tend to move toward things that challenge me and push me to think more deeply.  
       I’m more **consistent** than impulsive. I prefer steady progress over short bursts of motivation, and I see learning as something that fits into everyday life rather than something separate from it.
 
@@ -207,7 +207,7 @@ params:
             - "Microsoft Office"
             - "Power BI"
             - "JMP Pro"
-            - "SAP (ERP)"
+            - "ERP (SAP)"
             - "MES"
 
         - name: "⚙️ Engineering Design & Simulation Software"
@@ -261,11 +261,16 @@ params:
             info:
               content: Internship # Synthetic explanation
             content: |
-              Mainly focused on understanding manufacturing processes, identifying their critical points, and developing digital and standardised solutions to make them more efficient, stable, and easier to manage.
+              I work at the intersection of production engineering, data analysis and software development.
 
-              * Worked on the acetate temples production flow, analysing the process, identifying critical areas, and supporting practical improvement actions.
-              * Analysed production KPIs such as OEE, downtime, and scrap rate to understand inefficiencies and support Lean Manufacturing initiatives.
-              * Designed and implemented digital tools, data workflows, and department standards using Python, SQL, and Java to improve and standardise production management.
+              My main project is the development of an **APS-oriented software platform** for production scheduling and operational monitoring. The system:
+
+              * integrates MES and SQL production data
+              * recommends lot allocation and sequencing based on machine availability, due dates, production and quality constraints, and changeover minimisation
+              * provides real-time KPI monitoring, historical trend analysis and comparison against departmental targets
+              * supports the standardisation and digitalisation of departmental planning processes
+
+              Alongside the project, I analyse **production data** related to performance, quality, cycle times, scrap and many others, supporting root-cause analysis, **Lean Manufacturing** and continuous improvement initiatives.
 
             featuredItems:
               fontAwesomeIcons:
@@ -314,9 +319,9 @@ params:
       - title: Master of Science · Materials Engineering & Nanotechnology
         school:
           name: Politecnico di Milano, Italy
-          url: https://polimi.it/en/
+          url: https://polimi.it
         date: Sep 2023 - Jul 2026
-        final_grade: – out of 110
+        final_grade: 100 out of 110
         content: |
           Specialisation in **Engineering Application**.
 
@@ -339,7 +344,7 @@ params:
       - title: Exchange Student · Materials Engineering
         school:
           name: Shanghai Jiao Tong University, China
-          url: https://en.sjtu.edu.cn/
+          url: https://en.sjtu.edu.cn
         date: Sep 2024 - Feb 2025
         GPA: 3.8 out of 4.0
         content: |
@@ -355,7 +360,7 @@ params:
       - title: "Bachelor's Degree · Materials Engineering & Nanotechnology"
         school:
           name: Politecnico di Milano, Italy
-          url: https://polimi.it/en/
+          url: https://polimi.it
         date: Sep 2020 - Jul 2023
         final_grade: 93 out of 110
         content: |
@@ -366,7 +371,7 @@ params:
             – Structural Mechanics
 
           🧪 **Bachelor's Thesis ➝ Printed Device for Energy Storage (Group Project)**  
-          Development and characterization of a printed energy-storage device, focusing on **gel-based electrolytes** to optimise energy density, ionic conductivity, and mechanical resistance for improved overall performance.
+          Development and characterisation of a printed energy-storage device, focusing on **gel-based electrolytes** to optimise energy density, ionic conductivity, and mechanical resistance for improved overall performance.
 
         featuredLink:
           enable: true
@@ -376,10 +381,10 @@ params:
       - title: Exchange Student · STEM subjects
         school:
           name: Kawana Waters State College, Australia
-          url: https://kawanawaterssc.eq.edu.au/
+          url: https://kawanawaterssc.eq.edu.au
         date: Jul 2016 - Sep 2016
         content: |-
-          One term abroad. Enrolled in regular curriculum alongside local students and hosted by a local family.
+          Spent one academic term abroad, attending the same classes as local students and living with a host family.
 
   # ====================================== ACHIEVEMENTS ====================================== #
   achievements:
