@@ -291,7 +291,7 @@ params:
                   # url: /lifeguard-certification
                   tooltip: Lifeguard Certification
                 - icon: fas fa-location-dot
-                  tooltip: Milano (MI), Italy
+                  tooltip: Milano, Italy
               # customIcons:
                   # - icon: /fav.png
                   # url: "https://example.com"
@@ -306,7 +306,7 @@ params:
                   # url: /lifeguard-certification
                   tooltip: Lifeguard Certification
                 - icon: fas fa-location-dot
-                  tooltip: Treviso (TV), Italy
+                  tooltip: Treviso, Italy
 
 
   # ====================================== EDUCATION ====================================== #
