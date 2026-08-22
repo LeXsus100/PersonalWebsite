@@ -1,7 +1,7 @@
 baseURL: "https://luigicasagrande.it"
 relativeURLs: true
 canonifyURLs: true
-languageCode: "en-us"
+locale: "en-US"
 title: "Luigi"
 theme: "hugo-profile"
 
@@ -36,11 +36,17 @@ markup:
 
 Menus:
   main:
-    - identifier: blog
-      name: Blog
-      title: Blog
-      url: /blog
+    - identifier: lab
+      name: Lab
+      title: Explore the Lab
+      url: /lab/
       weight: 1
+
+    - identifier: contact
+      name: Contact
+      title: Contact Luigi
+      url: /#contact
+      weight: 2
     
     # Dropdown menu
     # - identifier: dropdown
@@ -127,17 +133,17 @@ params:
     menus:
       disableAbout: false
       disableExperience: false
-      disableEducation: false
-      disableProjects: false
+      disableEducation: true
+      disableProjects: true
       disableAchievements: true
-      disableContact: false
+      disableContact: true
 
   # ====================================== FRONT PAGE ====================================== #
   hero:
     enable: true
     intro: Hi, my name is
     title: Luigi
-    subtitle: Production Engineer
+    subtitle: Industrial Engineer
     content: |
       Curious by default, consistent by choice, and always building something I didn’t know how to build yesterday.
     image: /images/robot_holding_a_pink_flower_and_observing_it.jpg
@@ -163,44 +169,40 @@ params:
   # ====================================== ABOUT ====================================== #
   about:
     enable: true
-    title: "About Me"
+    title: "About"
     # image: "/images/me.png"
     content: |
-      I hold a Master’s degree in **Materials Engineering and Nanotechnology**.  
-      My path hasn’t really followed a straight line and I’ve never felt the need to make it look that way. I tend to move toward things that challenge me and push me to think more deeply.  
-      I’m more **consistent** than impulsive. I prefer steady progress over short bursts of motivation, and I see learning as something that fits into everyday life rather than something separate from it.
+      I hold a **Master’s degree** in **Materials Engineering and Nanotechnology**, but my interests have never stayed within one field.
 
-      Outside university I spent many years in **competitive swimming** and studying **piano**, both with regular training and formal commitments. I also attended a **sailing course** with the Italian Navy, took part in a few **academic competitions**, did **tutoring**, and worked summer seasons as a **lifeguard**.  
-      I’ve always liked environments where people rely on each other and where showing up prepared actually matters.
-       
-      I’ve lived and studied abroad as well, with longer periods in **Australia** and **China** and shorter ones in UK, USA, and France. What I actually enjoy is the *contrast*: different cultures, landscapes, food, and religions.  
-      I like being immersed in places where my usual references don’t apply, setting aside what I’m used to and trying to look at things with a new, unfiltered perspective.
+      I spent many years in **competitive swimming** and studying **piano**, and along the way I’ve worked as a lifeguard, tutored, and taken part in academic competitions.  
+      I’ve lived and studied abroad in **China** and **Australia**, with shorter periods in the UK, US, and France. I enjoy being somewhere unfamiliar and seeing how differently people live and think.
 
-      Recently most of my free time goes into programming and technical projects.  
-      I’m building a *"not so small"* home server based on Debian with a UniFi setup. I’ve also been working on a few personal websites (as this one), mostly as a way to understand how systems fit together rather than just using ready-made platforms.
-      
-      I originally learned **LaTeX** simply because I liked how it looked, and at some point it replaced Word entirely: from my second year of university onward every set of notes, report, and assignment has been written in it.  
-      **Python** started as a tool for financial data back-testing while studying personal finance and gradually became part of my everyday workflow; now I use it for analysis, plots, small utilities, and anything repetitive enough to automate.  
-      I could probably continue for quite a while.
+      These days, a lot of my free time goes into **building and tinkering** with things: running a Debian home server, developing React websites, writing documentation in LaTeX, building Python software, and pretty much anything else that gives me an excuse to dig into how things work under the hood.
 
-      In general I’m curious about systems more than specific fields, so I end up reading about **finance**, **geopolitics**, **theology**, **strategy games**, and whatever else catches my attention.  
-      I like linking ideas together more than specialising early.
-
-      Outside of that, I’m very Italian about food: **pizza** is easily my favourite.  
-      I also like **dogs** and animals in general; they tend to be straightforward in a way people rarely are.
+      That curiosity extends well beyond technology. I spend a lot of time reading about **finance**, **geopolitics**, **strategy games**, and generally disappearing down whatever **rabbit hole** happens to catch my attention.
 
     skills:
       enable: true
       title: "Skills"
       groups:
-        - name: "⌨️ Programming & Scripting"
-          items:
-            - "Python"
-            - "LaTeX"
-            - "JavaScript"
-            - "C++"
-            - "HTML/CSS"
-            - "SQL"
+        - name: "⌨️ Software Development"
+          fullWidth: true
+          categories:
+            - name: "Languages"
+              tone: "blue"
+              items: ["Rust", "TypeScript", "JavaScript", "Python", "C++"]
+            - name: "Frontend"
+              tone: "cyan"
+              items: ["React", "HTML/CSS"]
+            - name: "Frameworks & Tooling"
+              tone: "violet"
+              items: ["Node.js", "Tauri", "Vite"]
+            - name: "Data"
+              tone: "green"
+              items: ["SQL"]
+            - name: "Typesetting"
+              tone: "amber"
+              items: ["LaTeX"]
 
         - name: "📈 Data Analysis & Productivity Tools"
           items:
@@ -224,27 +226,42 @@ params:
             - "LAMMPS"
             - "MATLAB"
 
+        - name: "🤖 AI-Assisted Software Engineering"
+          description: "Agentic coding workflows, including coding agents, subagent orchestration, tool use, context design, and human verification."
+
     languages:
       enable: true
       title: "🌍 Languages"
       items:
         - name: "Italian"
-          level: "native"
+          proficiency: 5
+          note: "Native language"
+          colors: ["#009246", "#009246", "#ffffff", "#ce2b37", "#ce2b37"]
         - name: "English"
-          level: "fluent"
+          proficiency: 5
+          note: "Bilingual"
+          colors: ["#c8102e", "#ffffff", "#012169", "#ffffff", "#c8102e"]
+          credential:
+            name: "IELTS Academic"
+            year: "2023"
+            score: "7.5"
+            cefr: "C1"
         - name: "French"
-          level: "intermediate"
+          proficiency: 2
+          note: "Studied for a few years"
+          colors: ["#0055a4", "#0055a4", "#ffffff", "#ef4135", "#ef4135"]
         - name: "Chinese"
-          level: "beginner"
+          proficiency: 1
+          learning: true
+          note: "Actively studying"
+          colors: ["#de2910", "#ffde00", "#de2910", "#de2910", "#de2910"]
 
     certifications:
       enable: true
       title: "📜 Certifications"
       items:
-        - language: "English"
-          name: "IELTS Academic"
-          detail: "CEFR C1"
-          year: "2023"
+        - name: "Italian Pool Lifesaving Certification"
+          issued: "2016"
     
     
   # ====================================== EXPERIENCE ====================================== #
@@ -256,21 +273,20 @@ params:
       - company: EssilorLuxottica
         companyUrl: https://www.essilorluxottica.com/
         jobs:
-          - name: Raw Production Engineer # Job Title
+          - name: Production Planning Engineer # Job Title
             date: April 2026 - Current
             info:
               content: Internship # Synthetic explanation
             content: |
-              I work at the intersection of production engineering, data analysis and software development.
+              I work across **production planning**, **manufacturing engineering**, **data analysis** and **digital OT**, with a focus on analysing, digitalising and standardising production operations, projects and reporting.
 
-              My main project is the development of an **APS-oriented software platform** for production scheduling and operational monitoring. The system:
+              As part of a broader effort to **digitalise production operations**, I design and develop **end-to-end software applications**, covering data architecture, databases, backend logic, system integration, user interfaces and deployment. My work includes:
 
-              * integrates MES and SQL production data
-              * recommends lot allocation and sequencing based on machine availability, due dates, production and quality constraints, and changeover minimisation
-              * provides real-time KPI monitoring, historical trend analysis and comparison against departmental targets
-              * supports the standardisation and digitalisation of departmental planning processes
+              * turning operational processes into structured software solutions, replacing manual and fragmented workflows
+              * integrating MES, SQL and production data to support planning, traceability, reporting and decision-making
+              * building planning and performance tools for sequencing, capacity management, KPIs and operational analysis
 
-              Alongside the project, I analyse **production data** related to performance, quality, cycle times, scrap and many others, supporting root-cause analysis, **Lean Manufacturing** and continuous improvement initiatives.
+              Alongside software development, I work directly on **production planning and manufacturing performance**, managing priorities, lot allocation, sequencing and capacity while analysing **OEE**, **scrap**, **cycle times**, **quality** and **production losses** to support root-cause analysis, **Lean Manufacturing** and continuous improvement.
 
             featuredItems:
               fontAwesomeIcons:
@@ -323,23 +339,21 @@ params:
         date: Sep 2023 - Jul 2026
         final_grade: 100 out of 110
         content: |
-          Specialisation in **Engineering Application**.
+          Specialisation in **Engineering Application**:  
+          An application-oriented track focused on connecting materials science fundamentals with real engineering problems, from material selection and processing to performance, failure, surface engineering, energy applications, and sustainability.
 
-          **Relevant coursework:**  
-            ⦁ Metallic Materials and Product Innovation  
-            ⦁ Materials for Energy Applications  
-            ⦁ Composite Materials for Structural Applications  
-            ⦁ Life Cycle Assessment
+          The programme covered **metals**, **polymers**, **composites**, and **advanced materials**, combining their mechanical and chemical behaviour with characterisation methods, manufacturing considerations, corrosion, product development, and life-cycle assessment.
 
-          A limited selection of **lecture notes** from this period is available <a href="/blog/academic-notes/">here</a>.
+          A selection of **lecture notes** from the programme is available <a href="/library/latex-notes/">here</a>.
 
           🎓 **Master's Thesis ➝ Solid-State Aluminium Recycling**  
           Experimental investigation of **solid-state aluminium recycling** via roll bonding, analysing the influence of process parameters on microstructure, mechanical properties, and hardness to assess feasibility and material behaviour.
 
+
         featuredLink:
           enable: true
-          name: Master Thesis (Pending Publication)
-          # url: pdf/PoliMi_Luigi-Master_Thesis.pdf
+          name: Master Thesis (Public version)
+          url: pdf/PoliMi_Luigi-Master_Thesis.pdf
 
       - title: Exchange Student · Materials Engineering
         school:
@@ -348,30 +362,25 @@ params:
         date: Sep 2024 - Feb 2025
         GPA: 3.8 out of 4.0
         content: |
-          *"World Wide Exchange Program"* offered by *Politecnico di Milano*, with academic activities focused on project-based work and applied use of theoretical concepts.
-
-          **Relevant coursework:**  
-            ‣ Multiscale Materials Modelling  
-            ‣ Advanced Bio-Functional Materials  
-            ‣ Smart Polymeric Materials
-
-          A selection of **projects** completed during this exchange period is available <a href="/blog/exchange-projects/">here</a>.
+          **"World Wide Exchange Program"** offered by *Politecnico di Milano*.
           
-      - title: "Bachelor's Degree · Materials Engineering & Nanotechnology"
+          It focused on **project-based learning and practical application of materials science concepts**, with work spanning multiscale modelling, bio-functional and smart polymeric materials, thermodynamics, and advanced characterisation techniques.
+
+          A selection of **projects** completed during the exchange is available <a href="/library/sjtu-coursework/">here</a>.
+
+          
+      - title: "Bachelor of Science · Materials Engineering & Nanotechnology"
         school:
           name: Politecnico di Milano, Italy
           url: https://polimi.it
         date: Sep 2020 - Jul 2023
         final_grade: 93 out of 110
         content: |
-          **Relevant coursework:**  
-            – Steelmaking  
-            – CAD Modelling  
-            – Data Analysis and Experimental Methods  
-            – Structural Mechanics
+          The programme built a broad foundation in materials science and engineering, covering the **behaviour**, **processing**, and **characterisation** of **metals**, **polymers**, and **ceramics**, together with mechanics, corrosion, experimental methods, and CAD.
 
           🧪 **Bachelor's Thesis ➝ Printed Device for Energy Storage (Group Project)**  
           Development and characterisation of a printed energy-storage device, focusing on **gel-based electrolytes** to optimise energy density, ionic conductivity, and mechanical resistance for improved overall performance.
+
 
         featuredLink:
           enable: true
@@ -382,9 +391,10 @@ params:
         school:
           name: Kawana Waters State College, Australia
           url: https://kawanawaterssc.eq.edu.au
-        date: Jul 2016 - Sep 2016
+        date: Jun 2016 - Sep 2016
         content: |-
-          Spent one academic term abroad, attending the same classes as local students and living with a host family.
+          One academic term abroad, fully immersed in the **local school environment and culture** through regular classes alongside local students and a host-family stay.
+
 
   # ====================================== ACHIEVEMENTS ====================================== #
   achievements:
@@ -404,6 +414,7 @@ params:
       - title: Treviso Mathematics Olympiad Website
         content: Created and maintain the official website for the Treviso Mathematics Olympiad district, providing updates and resources.
         image: /images/OlimatTV_logo.png
+        article: /projects/treviso-math-olympiad/
         featured:
           name: Go to Website
           link: https://www.olimat-tv.it/en/

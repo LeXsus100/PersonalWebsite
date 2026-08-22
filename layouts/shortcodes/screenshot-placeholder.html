@@ -1,0 +1,11 @@
+{{- $title := .Get "title" | default "Screenshot planned" -}}
+{{- $note := .Get "note" | default "Replace this placeholder when the interface or photograph is ready to publish." -}}
+{{- $caption := .Get "caption" -}}
+<figure class="article-screenshot-placeholder">
+  <div class="article-screenshot-placeholder__frame">
+    <span>Screenshot placeholder</span>
+    <strong>{{ $title }}</strong>
+    <p>{{ $note }}</p>
+  </div>
+  {{ with $caption }}<figcaption>{{ . }}</figcaption>{{ end }}
+</figure>

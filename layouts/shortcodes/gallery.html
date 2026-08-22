@@ -1,0 +1,55 @@
+{{- $label := .Get "label" | default "Image gallery" -}}
+{{- $galleryID := printf "article-gallery-%d" .Ordinal -}}
+{{- $items := slice -}}
+{{- range split .Inner "\n" -}}
+  {{- $line := strings.TrimSpace . -}}
+  {{- if $line -}}
+    {{- $parts := split $line "|" -}}
+    {{- $src := strings.TrimSpace (index $parts 0) -}}
+    {{- $alt := $src -}}
+    {{- $caption := "" -}}
+    {{- if ge (len $parts) 2 -}}{{- $alt = strings.TrimSpace (index $parts 1) -}}{{- end -}}
+    {{- if ge (len $parts) 3 -}}{{- $caption = strings.TrimSpace (index $parts 2) -}}{{- end -}}
+    {{- $href := $src -}}
+    {{- with $.Page.Resources.GetMatch $src -}}
+      {{- $href = .RelPermalink -}}
+    {{- else -}}
+      {{- if not (or (strings.HasPrefix $src "http://") (strings.HasPrefix $src "https://")) -}}
+        {{- $href = $src | relURL -}}
+      {{- end -}}
+    {{- end -}}
+    {{- $items = $items | append (dict "src" $href "alt" $alt "caption" $caption) -}}
+  {{- end -}}
+{{- end -}}
+
+{{- if $items -}}
+<section class="article-gallery" id="{{ $galleryID }}" data-lab-gallery aria-label="{{ $label }}">
+  <div class="article-gallery__stage">
+    {{- range $index, $item := $items }}
+    <figure class="article-gallery__slide" data-gallery-slide{{ if ne $index 0 }} hidden{{ end }}>
+      <button class="article-gallery__image-button" type="button" data-gallery-open="{{ $index }}" data-lightbox-src="{{ $item.src }}" data-lightbox-alt="{{ $item.alt }}"{{ with $item.caption }} data-lightbox-caption="{{ . }}"{{ end }} aria-label="Open image {{ add $index 1 }} of {{ len $items }} in full screen">
+        <img src="{{ $item.src }}" alt="{{ $item.alt }}" loading="lazy" decoding="async">
+      </button>
+      {{ with $item.caption }}<figcaption>{{ . }}</figcaption>{{ end }}
+    </figure>
+    {{- end }}
+    {{- if gt (len $items) 1 }}
+    <button class="article-gallery__nav article-gallery__nav--previous" type="button" data-gallery-previous aria-label="Previous image">&#8592;</button>
+    <button class="article-gallery__nav article-gallery__nav--next" type="button" data-gallery-next aria-label="Next image">&#8594;</button>
+    {{- end }}
+  </div>
+
+  {{- if gt (len $items) 1 }}
+  <div class="article-gallery__footer">
+    <span class="article-gallery__counter" data-gallery-counter aria-live="polite">1 / {{ len $items }}</span>
+    <div class="article-gallery__thumbnails" aria-label="Choose an image">
+      {{- range $index, $item := $items }}
+      <button class="article-gallery__thumbnail{{ if eq $index 0 }} is-active{{ end }}" type="button" data-gallery-thumbnail="{{ $index }}"{{ if eq $index 0 }} aria-current="true"{{ end }} aria-label="Show image {{ add $index 1 }} of {{ len $items }}">
+        <img src="{{ $item.src }}" alt="" loading="lazy" decoding="async">
+      </button>
+      {{- end }}
+    </div>
+  </div>
+  {{- end }}
+</section>
+{{- end -}}

@@ -1,0 +1,41 @@
+{{ define "head" }}
+<meta name="description" content="{{ .Description | default .Site.Params.description }}">
+<link rel="stylesheet" href="{{ "css/lab.css" | relURL }}?v=20260820-6" media="all">
+{{ end }}
+
+{{ define "title" }}{{ .Title }} | {{ .Site.Title }}{{ end }}
+
+{{ define "main" }}
+{{- $sectionKeys := slice "writings" "projects" "library" "experiments" -}}
+{{- $labPages := where .Site.RegularPages "Section" "in" $sectionKeys -}}
+<main class="lab-shell lab-archive">
+  <nav class="lab-breadcrumb" aria-label="Breadcrumb">
+    <a href="{{ "/lab/" | relURL }}">Lab</a>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">All entries</span>
+  </nav>
+
+  <header class="lab-archive__header">
+    <p class="lab-kicker">Complete archive</p>
+    <h1>{{ .Title }}</h1>
+    {{ with .Description }}<p>{{ . }}</p>{{ end }}
+  </header>
+
+  {{- $paginator := .Paginate ($labPages.ByDate.Reverse) -}}
+  <section class="lab-section-list" aria-label="All Lab entries">
+    <div class="lab-feed">
+      {{ range $paginator.Pages }}
+        {{ partial "lab/entry-card.html" . }}
+      {{ else }}
+        <div class="lab-empty"><p>The archive is still empty.</p></div>
+      {{ end }}
+    </div>
+
+    {{ if gt $paginator.TotalPages 1 }}
+      <nav class="lab-pagination" aria-label="Lab archive pages">
+        {{ template "_internal/pagination.html" . }}
+      </nav>
+    {{ end }}
+  </section>
+</main>
+{{ end }}

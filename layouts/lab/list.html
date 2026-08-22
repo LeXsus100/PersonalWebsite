@@ -1,0 +1,81 @@
+{{ define "head" }}
+<meta name="description" content="{{ .Description | default .Site.Params.description }}">
+<link rel="stylesheet" href="{{ "css/lab.css" | relURL }}?v=20260820-6" media="all">
+{{ end }}
+
+{{ define "title" }}{{ .Title }} | {{ .Site.Title }}{{ end }}
+
+{{ define "main" }}
+{{- $sectionKeys := slice "writings" "projects" "library" "experiments" -}}
+{{- $labPages := where .Site.RegularPages "Section" "in" $sectionKeys -}}
+<main class="lab-shell lab-home">
+  <section class="lab-hero" aria-labelledby="lab-title">
+    <p class="lab-kicker">Luigi's workshop</p>
+    <h1 id="lab-title">{{ .Title }}</h1>
+    <div class="lab-hero__intro">{{ .Content }}</div>
+    <a class="lab-hero__jump" href="#latest">
+      <span class="lab-hero__jump-label">Latest from the Lab</span>
+      <span class="lab-hero__arrow" aria-hidden="true">
+        <svg width="24" height="24" viewBox="0 0 24 24" focusable="false">
+          <path d="M12 3v16M12 19l-7-7M12 19l7-7" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </span>
+    </a>
+  </section>
+
+  <section class="lab-spaces" aria-labelledby="spaces-title">
+    <div class="lab-section-heading">
+      <p class="lab-kicker">Four spaces</p>
+      <h2 id="spaces-title">Choose a door</h2>
+    </div>
+
+    <div class="lab-space-grid">
+      {{ range hugo.Data.lab.spaces }}
+        {{- $section := $.Site.GetPage (printf "/%s" .key) -}}
+        {{- $lastEdit := "" -}}
+        {{- with $section -}}
+          {{- range first 1 .RegularPagesRecursive.ByLastmod.Reverse -}}
+            {{- $lastEdit = .Lastmod.Format "02 Jan 2006" -}}
+          {{- end -}}
+        {{- end -}}
+        <a class="lab-space lab-space--{{ .key }}" href="{{ printf "/%s/" .key | relURL }}">
+          <div class="lab-space__topline">
+            <span>{{ .number }}</span>
+            <span>{{ if $lastEdit }}Last edit · {{ $lastEdit }}{{ else }}Ready for work{{ end }}</span>
+          </div>
+          <p class="lab-space__eyebrow">{{ .eyebrow }}</p>
+          <h3>{{ .title }}</h3>
+          <p>{{ .description }}</p>
+          <span class="lab-space__prompt">{{ .prompt }} <span aria-hidden="true">&#8594;</span></span>
+        </a>
+      {{ end }}
+    </div>
+  </section>
+
+  <section class="lab-latest" id="latest" aria-labelledby="latest-title">
+    <div class="lab-section-heading">
+      <div>
+        <p class="lab-kicker">In chronological order</p>
+        <h2 id="latest-title">Latest from the Lab</h2>
+      </div>
+    </div>
+
+    {{- $latestPages := first 6 $labPages.ByDate.Reverse -}}
+    <div class="lab-feed">
+      {{ range $latestPages }}
+        {{ partial "lab/entry-card.html" . }}
+      {{ else }}
+        <div class="lab-empty">
+          <p>The benches are ready. The first entry is still being made.</p>
+        </div>
+      {{ end }}
+    </div>
+
+    <div class="lab-latest__footer">
+      <a class="lab-show-all" href="{{ "/lab/all/" | relURL }}">
+        <span>Show all</span><span aria-hidden="true">&#8594;</span>
+      </a>
+    </div>
+  </section>
+</main>
+{{ end }}

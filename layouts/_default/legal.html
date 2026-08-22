@@ -1,0 +1,44 @@
+{{ define "head" }}
+<meta name="description" content="{{ .Description | default .Title }}">
+<link rel="stylesheet" href="{{ "css/legal.css" | relURL }}" media="all">
+{{ end }}
+
+{{ define "title" }}{{ .Title }} | {{ .Site.Title }}{{ end }}
+
+{{ define "main" }}
+<main class="legal-page">
+  <div class="legal-reading-header" data-legal-reading-header aria-hidden="true">
+    <div class="legal-reading-header__inner">
+      <span class="legal-reading-header__category">Legal</span>
+      <span class="legal-reading-header__title">{{ .Title }}</span>
+    </div>
+  </div>
+
+  <div class="legal-shell">
+    <nav class="legal-breadcrumb" aria-label="Breadcrumb">
+      <a href="{{ "/" | relURL }}">Home</a>
+      <span aria-hidden="true">/</span>
+      <span aria-current="page">{{ .Title }}</span>
+    </nav>
+
+    <header class="legal-hero" data-legal-page-header>
+      <p>Legal</p>
+      <h1>{{ .Title }}</h1>
+      {{ with .Description }}<div>{{ . }}</div>{{ end }}
+      <small>Last updated {{ (.Lastmod | default .Date).Format "2 January 2006" }}</small>
+    </header>
+
+    {{ if and (.Params.toc | default true) (ne .TableOfContents "<nav id=\"TableOfContents\"></nav>") }}
+      <details class="legal-contents">
+        <summary>Contents</summary>
+        {{ .TableOfContents }}
+      </details>
+    {{ end }}
+
+    <article class="legal-prose">
+      {{ .Content | emojify }}
+    </article>
+  </div>
+</main>
+<script src="{{ "js/legal-page.js" | relURL }}" defer></script>
+{{ end }}

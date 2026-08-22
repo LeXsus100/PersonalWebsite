@@ -1,0 +1,52 @@
+/* One visual language for custom and Bootstrap-powered tooltips. */
+#about .language-tooltip__content,
+.tooltip .tooltip-inner {
+  max-width: min(230px, calc(100vw - 48px));
+  padding: 8px 10px;
+  border: 1px solid color-mix(in srgb, var(--primary-color) 24%, transparent);
+  border-radius: 9px;
+  background: color-mix(in srgb, var(--background-color) 96%, #000);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.24);
+  color: var(--text-color);
+  font-family: "Roboto", sans-serif;
+  font-size: 0.76rem;
+  font-weight: 600;
+  line-height: 1.35;
+  text-align: left;
+}
+
+.tooltip {
+  font-family: "Roboto", sans-serif;
+}
+
+/* Bootstrap appends tooltips directly to <body>. The theme colours every
+   direct body child, which otherwise paints the tooltip's arrow padding and
+   creates dark bands above and below the actual tooltip card. */
+body > .tooltip {
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.tooltip.show {
+  opacity: 1;
+}
+
+.tooltip.fade {
+  transition: opacity 140ms ease;
+}
+
+.bs-tooltip-top .tooltip-arrow::before {
+  border-top-color: color-mix(in srgb, var(--primary-color) 24%, transparent);
+}
+
+.bs-tooltip-end .tooltip-arrow::before {
+  border-right-color: color-mix(in srgb, var(--primary-color) 24%, transparent);
+}
+
+.bs-tooltip-bottom .tooltip-arrow::before {
+  border-bottom-color: color-mix(in srgb, var(--primary-color) 24%, transparent);
+}
+
+.bs-tooltip-start .tooltip-arrow::before {
+  border-left-color: color-mix(in srgb, var(--primary-color) 24%, transparent);
+}

@@ -1,0 +1,123 @@
+{{ define "head" }}
+<meta name="description" content="{{ .Description | default (.Summary | plainify) }}">
+<link rel="stylesheet" href="{{ "css/single.css" | relURL }}">
+<link rel="stylesheet" href="{{ "css/lab.css" | relURL }}?v=20260820-6">
+{{ end }}
+
+{{ define "title" }}{{ .Title }} | {{ .Site.Title }}{{ end }}
+
+{{ define "main" }}
+{{- $sectionKey := .Section -}}
+{{- $sectionTitle := $sectionKey | humanize | title -}}
+{{- range hugo.Data.lab.spaces -}}
+  {{- if eq .key $sectionKey -}}
+    {{- $sectionTitle = .title -}}
+  {{- end -}}
+{{- end -}}
+
+<main id="single" class="lab-article">
+  <div class="lab-reading-header" data-lab-reading-header aria-hidden="true">
+    <div class="lab-reading-header__inner">
+      <span class="lab-reading-header__category lab-reading-header__category--{{ $sectionKey }}">{{ $sectionTitle }}</span>
+      <span class="lab-reading-header__title">{{ .Title }}</span>
+    </div>
+  </div>
+
+  <div class="lab-article__shell">
+    <nav class="lab-breadcrumb" aria-label="Breadcrumb">
+      <a href="{{ "/lab/" | relURL }}">Lab</a>
+      <span aria-hidden="true">/</span>
+      <a href="{{ printf "/%s/" $sectionKey | relURL }}">{{ $sectionTitle }}</a>
+    </nav>
+
+    <header class="lab-article__header" data-lab-article-header>
+      <a class="lab-badge lab-badge--{{ $sectionKey }}" href="{{ printf "/%s/" $sectionKey | relURL }}">{{ $sectionTitle }}</a>
+      {{ with .Params.sample }}<span class="lab-sample-label">Example article</span>{{ end }}
+      <h1>{{ .Title }}</h1>
+      {{ with .Description }}<p class="lab-article__lede">{{ . }}</p>{{ end }}
+      <div class="lab-article__meta">
+        {{ with .Params.author }}<span>By {{ . }}</span><span aria-hidden="true">&middot;</span>{{ end }}
+        <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format (.Site.Params.datesFormat.article | default "Jan 2, 2006") }}</time>
+        <span aria-hidden="true">&middot;</span>
+        <span>{{ .ReadingTime }} min read</span>
+      </div>
+    </header>
+
+    {{ with .Params.image }}
+      {{- $imagePath := . -}}
+      {{- with $.Resources.GetMatch . -}}
+        {{- $imagePath = .RelPermalink -}}
+      {{- else -}}
+        {{- $imagePath = . | relURL -}}
+      {{- end -}}
+      <figure class="lab-article__cover">
+        <img src="{{ $imagePath }}" alt="{{ $.Params.image_alt | default $.Title }}">
+        {{ with $.Params.image_caption }}<figcaption>{{ . }}</figcaption>{{ end }}
+      </figure>
+    {{ end }}
+
+    <div class="lab-article__grid">
+      <article class="page-content lab-prose">
+        {{ .Content | emojify }}
+      </article>
+
+      <aside class="lab-article__sidebar lab-article__sidebar--{{ $sectionKey }}" aria-label="Article navigation">
+        <div class="lab-article__sidebar-panel">
+          <p class="lab-sidebar-kicker">Reading guide</p>
+        {{ if and (.Params.toc | default true) (ne .TableOfContents "<nav id=\"TableOfContents\"></nav>") }}
+          <section class="lab-article__toc" aria-labelledby="article-toc-title">
+            <h2 class="lab-sidebar-title" id="article-toc-title">On this page</h2>
+            {{ .TableOfContents }}
+          </section>
+        {{ end }}
+
+        {{ with .Params.tags }}
+          <section class="lab-article__tags" aria-labelledby="article-tags-title">
+            <h2 class="lab-sidebar-title" id="article-tags-title">Tags</h2>
+            <div>
+              {{ range . }}
+                <a href="{{ printf "/tags/%s/" (. | urlize) | relURL }}">{{ . }}</a>
+              {{ end }}
+            </div>
+          </section>
+        {{ end }}
+
+        <a class="lab-back-link" href="{{ printf "/%s/" $sectionKey | relURL }}">
+          <span>Browse {{ $sectionTitle | lower }}</span><span aria-hidden="true">&#8594;</span>
+        </a>
+        </div>
+      </aside>
+    </div>
+
+    {{- $labSections := slice "writings" "projects" "library" "experiments" -}}
+    {{- $otherPages := where (where .Site.RegularPages "Section" "in" $labSections) "RelPermalink" "ne" .RelPermalink -}}
+    {{- with first 2 (shuffle $otherPages) -}}
+      <section class="lab-more" aria-labelledby="lab-more-title">
+        <div class="lab-section-heading">
+          <p class="lab-kicker">Keep exploring</p>
+          <h2 id="lab-more-title">Elsewhere in the Lab</h2>
+        </div>
+        <div class="lab-feed">
+          {{ range . }}{{ partial "lab/entry-card.html" . }}{{ end }}
+        </div>
+      </section>
+    {{- end }}
+  </div>
+
+  <button class="lab-to-top" type="button" data-lab-to-top aria-label="Back to top">
+    <span class="lab-to-top__icon" aria-hidden="true">
+      <svg width="24" height="24" viewBox="0 0 24 24" focusable="false">
+        <path d="M12 21V5M12 5l-7 7M12 5l7 7" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+      </svg>
+    </span>
+  </button>
+</main>
+
+{{ if .Site.Params.singlePages.scrollprogress.enable | default true }}
+  <div class="progress">
+    <div id="scroll-progress-bar" class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+  </div>
+  <script src="{{ "js/scrollProgressBar.js" | relURL }}"></script>
+{{ end }}
+<script src="{{ "js/lab-article.js" | relURL }}?v=20260820"></script>
+{{ end }}

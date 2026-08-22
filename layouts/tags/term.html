@@ -1,0 +1,47 @@
+{{ define "head" }}
+<meta name="description" content="Lab entries tagged {{ .Title }}">
+<link rel="stylesheet" href="{{ "css/lab.css" | relURL }}?v=20260820-6" media="all">
+{{ end }}
+
+{{ define "title" }}{{ .Title }} | Tags | {{ .Site.Title }}{{ end }}
+
+{{ define "main" }}
+{{- $labSections := slice "writings" "projects" "library" "experiments" -}}
+{{- $pages := where .Pages "Section" "in" $labSections -}}
+{{- $paginator := .Paginate ($pages.ByDate.Reverse) -}}
+<main class="lab-shell lab-taxonomy-page">
+  <nav class="lab-breadcrumb" aria-label="Breadcrumb">
+    <a href="{{ "/lab/" | relURL }}">Lab</a>
+    <span aria-hidden="true">/</span>
+    <a href="{{ "/tags/" | relURL }}">Tags</a>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">{{ .Title }}</span>
+  </nav>
+
+  <section class="lab-taxonomy-hero">
+    <p class="lab-kicker">Lab tag</p>
+    <h1>#{{ .Title }}</h1>
+    <p>{{ len $pages }} {{ if eq (len $pages) 1 }}entry{{ else }}entries{{ end }} connected by this topic.</p>
+  </section>
+
+  <section class="lab-section-list" aria-labelledby="tagged-entries-title">
+    <div class="lab-section-heading">
+      <p class="lab-kicker">Newest first</p>
+      <h2 id="tagged-entries-title">Tagged entries</h2>
+    </div>
+    <div class="lab-feed">
+      {{ range $paginator.Pages }}
+        {{ partial "lab/entry-card.html" . }}
+      {{ else }}
+        <div class="lab-empty"><p>No Lab entries use this tag yet.</p></div>
+      {{ end }}
+    </div>
+
+    {{ if gt $paginator.TotalPages 1 }}
+      <nav class="lab-pagination" aria-label="Tag pages">
+        {{ template "_internal/pagination.html" . }}
+      </nav>
+    {{ end }}
+  </section>
+</main>
+{{ end }}

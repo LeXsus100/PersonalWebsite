@@ -1,0 +1,35 @@
+{{ define "head" }}
+<meta name="description" content="Browse Lab entries by topic">
+<link rel="stylesheet" href="{{ "css/lab.css" | relURL }}?v=20260820-6" media="all">
+{{ end }}
+
+{{ define "title" }}Tags | {{ .Site.Title }}{{ end }}
+
+{{ define "main" }}
+{{- $labSections := slice "writings" "projects" "library" "experiments" -}}
+<main class="lab-shell lab-taxonomy-page">
+  <nav class="lab-breadcrumb" aria-label="Breadcrumb">
+    <a href="{{ "/lab/" | relURL }}">Lab</a>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">Tags</span>
+  </nav>
+
+  <section class="lab-taxonomy-hero">
+    <p class="lab-kicker">Browse by topic</p>
+    <h1>Tags</h1>
+    <p>Connections across writings, projects, the Library, and experiments.</p>
+  </section>
+
+  <div class="lab-tag-cloud">
+    {{ range .Data.Terms.Alphabetical }}
+      {{- $pages := where .Pages "Section" "in" $labSections -}}
+      {{- if gt (len $pages) 0 -}}
+        <a href="{{ .Page.RelPermalink }}">
+          <span>#{{ .Page.Title }}</span>
+          <small>{{ len $pages }}</small>
+        </a>
+      {{- end -}}
+    {{ end }}
+  </div>
+</main>
+{{ end }}

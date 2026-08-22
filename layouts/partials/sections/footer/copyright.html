@@ -1,0 +1,30 @@
+<div class="container py-4">
+    <div class="row justify-content-center">
+        <div class="col-md-6 text-center">
+            &copy; {{ now.Format "2006" }} {{ .Site.Params.copyright | default "Luigi Casagrande" }} <span aria-hidden="true">·</span> {{ .Site.Params.terms.copyright | default "All rights reserved" }}
+            <div class="mt-1">
+                <a href="{{ "privacy/" | relURL }}">Privacy Policy</a>
+                <span aria-hidden="true"> · </span>
+                <a href="{{ "terms/" | relURL }}">Terms of Service</a>
+            </div>
+            <div class="text-secondary mt-1">
+                🔨 Built with
+                <a href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a>
+                · Theme:
+                <a href="https://github.com/gurusabarish/hugo-profile" target="_blank" rel="noopener noreferrer">Hugo Profile</a> 🔨
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    window.addEventListener("load", function () {
+        if (!window.location.hash) return;
+        const target = document.querySelector(window.location.hash);
+        const header = document.querySelector("header");
+        if (!target || !header) return;
+
+        const top = target.getBoundingClientRect().top + window.pageYOffset - header.offsetHeight;
+        window.scrollTo({ top: top, behavior: "auto" });
+    });
+</script>

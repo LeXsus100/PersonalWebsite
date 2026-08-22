@@ -1,0 +1,31 @@
+{{- $sectionKey := .Section -}}
+{{- $sectionTitle := $sectionKey | humanize | title -}}
+{{- range hugo.Data.lab.spaces -}}
+  {{- if eq .key $sectionKey -}}
+    {{- $sectionTitle = .title -}}
+  {{- end -}}
+{{- end -}}
+
+<article class="lab-entry">
+  <div class="lab-entry__meta">
+    <a class="lab-badge lab-badge--{{ $sectionKey }}" href="{{ printf "/%s/" $sectionKey | relURL }}">
+      {{ $sectionTitle }}
+    </a>
+    <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "02 Jan 2006" }}</time>
+  </div>
+
+  <h3><a class="lab-entry__link" href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+
+  {{ with .Description }}
+    <p>{{ . }}</p>
+  {{ else }}
+    <p>{{ .Summary | plainify | htmlUnescape | truncate 180 }}</p>
+  {{ end }}
+
+  <div class="lab-entry__footer">
+    <span>{{ .ReadingTime }} min read</span>
+    <a class="lab-entry__open" href="{{ .RelPermalink }}" aria-label="Read {{ .Title }}">
+      Open <span aria-hidden="true">&#8599;</span>
+    </a>
+  </div>
+</article>

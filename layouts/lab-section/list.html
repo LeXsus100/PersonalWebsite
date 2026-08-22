@@ -1,0 +1,52 @@
+{{ define "head" }}
+<meta name="description" content="{{ .Description | default .Site.Params.description }}">
+<link rel="stylesheet" href="{{ "css/lab.css" | relURL }}?v=20260820-6" media="all">
+{{ end }}
+
+{{ define "title" }}{{ .Title }} | {{ .Site.Title }}{{ end }}
+
+{{ define "main" }}
+{{- $pages := .RegularPagesRecursive.ByDate.Reverse -}}
+{{- $paginator := .Paginate $pages -}}
+<main class="lab-shell lab-section-page">
+  <nav class="lab-breadcrumb" aria-label="Breadcrumb">
+    <a href="{{ "/lab/" | relURL }}">Lab</a>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">{{ .Title }}</span>
+  </nav>
+
+  <section class="lab-section-hero lab-section-hero--{{ .Params.lab_section }}">
+    <div>
+      <p class="lab-kicker">{{ .Params.eyebrow }}</p>
+      <h1>{{ .Title }}</h1>
+      <p>{{ .Description }}</p>
+    </div>
+    <div class="lab-section-hero__count" aria-label="{{ len $pages }} entries">
+      <strong>{{ len $pages }}</strong>
+      <span>{{ if eq (len $pages) 1 }}entry{{ else }}entries{{ end }}</span>
+    </div>
+  </section>
+
+  <section class="lab-section-list" aria-labelledby="entries-title">
+    <div class="lab-section-heading">
+      <p class="lab-kicker">Newest first</p>
+      <h2 id="entries-title">All {{ .Title | lower }}</h2>
+    </div>
+    <div class="lab-feed">
+      {{ range $paginator.Pages }}
+        {{ partial "lab/entry-card.html" . }}
+      {{ else }}
+        <div class="lab-empty">
+          <p>This space is set up and waiting for its first entry.</p>
+        </div>
+      {{ end }}
+    </div>
+
+    {{ if gt $paginator.TotalPages 1 }}
+      <nav class="lab-pagination" aria-label="{{ .Title }} pages">
+        {{ template "_internal/pagination.html" . }}
+      </nav>
+    {{ end }}
+  </section>
+</main>
+{{ end }}
