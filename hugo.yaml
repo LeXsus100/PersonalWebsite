@@ -227,7 +227,7 @@ params:
             - "MATLAB"
 
         - name: "🤖 AI-Assisted Software Engineering"
-          description: "Agentic coding workflows, including coding agents, subagent orchestration, tool use, context design, and human verification."
+          description: "Agentic coding workflows, including coding agents, subagent orchestration, tool use and context design."
 
     languages:
       enable: true
