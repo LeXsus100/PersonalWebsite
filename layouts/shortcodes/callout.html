@@ -1,0 +1,6 @@
+{{- $kind := .Get "kind" | default "note" -}}
+{{- $title := .Get "title" | default ($kind | humanize | title) -}}
+<aside class="article-callout article-callout--{{ $kind }}">
+  <p class="article-callout__title">{{ $title }}</p>
+  <div>{{ .Inner | markdownify }}</div>
+</aside>

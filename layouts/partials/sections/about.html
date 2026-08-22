@@ -1,0 +1,136 @@
+{{ if .Site.Params.about.enable | default false }}
+<section id="about" class="py-0 py-sm-5">
+    <div class="container bg-transparent">
+        <h3 class="text-center bg-transparent">{{ .Site.Params.about.title }}</h3>
+
+        <div class="about-intro bg-transparent row justify-content-center px-3 py-5">
+            {{ if .Site.Params.about.image }}
+            <div class="col-sm-12 col-md-8 col-lg-4 mb-5 mb-sm-0 mb-md-5 mb-lg-0 d-none d-sm-none d-md-block">
+                <div class="image d-flex px-5">
+                    <img src="{{ .Site.Params.about.image }}" class="img-thumbnail mx-auto rounded-circle" alt="">
+                </div>
+            </div>
+            {{ end }}
+            <div class="col-sm-12 col-md-12 col-lg-8 content">
+                {{ .Site.Params.about.content | markdownify }}
+            </div>
+        </div>
+
+        {{ if .Site.Params.about.skills.enable }}
+        <section class="about-skills-section" aria-labelledby="skills-title">
+            <h3 id="skills-title" class="text-center bg-transparent">{{ .Site.Params.about.skills.title | default "Skills" }}</h3>
+            <div class="row justify-content-center px-3">
+                <div class="col-sm-12 col-md-12 col-lg-8">
+                    <div class="about-skills-grid row g-3">
+                        {{ range .Site.Params.about.skills.groups }}
+                        <div class="{{ if .fullWidth }}col-12{{ else }}col-12 col-md-6{{ end }}">
+                            <div class="card about-skill-card{{ if .fullWidth }} about-skill-card--wide{{ end }}{{ if .categories }} about-skill-card--software{{ end }} h-100">
+                                <div class="card-body">
+                                    <h6 class="card-title skills-category">{{ .name }}</h6>
+                                    {{ with .categories }}
+                                    <div class="software-skill-groups">
+                                        {{ range . }}
+                                        <section class="software-skill-group software-skill-group--{{ .tone | default "blue" }}">
+                                            <div class="software-skill-group__heading">
+                                                <span class="software-skill-group__dot" aria-hidden="true"></span>
+                                                <span>{{ .name }}</span>
+                                            </div>
+                                            <p>{{ delimit .items " · " }}</p>
+                                        </section>
+                                        {{ end }}
+                                    </div>
+                                    {{ else with .description }}
+                                    <p class="skills-description">{{ . | markdownify }}</p>
+                                    {{ else }}
+                                    <ul class="skills-list">
+                                        {{ range .items }}
+                                        <li>{{ . | markdownify }}</li>
+                                        {{ end }}
+                                    </ul>
+                                    {{ end }}
+                                </div>
+                            </div>
+                        </div>
+                        {{ end }}
+                    </div>
+                </div>
+            </div>
+        </section>
+        {{ end }}
+
+        {{ if or (.Site.Params.about.languages.enable) (.Site.Params.about.certifications.enable) }}
+        <section id="about-languages" class="about-meta-section py-0">
+            <div class="row justify-content-center px-3">
+                <div class="col-sm-12 col-md-12 col-lg-8">
+                    <div class="about-meta about-meta-stack">
+                    {{ if .Site.Params.about.languages.enable }}
+                    <section class="card about-meta-card about-lang-card" aria-labelledby="languages-title">
+                            <div class="card-body">
+                                <h6 class="about-meta-title" id="languages-title">{{ .Site.Params.about.languages.title }}</h6>
+                                <div class="about-language-list">
+                                    {{ range .Site.Params.about.languages.items }}
+                                    {{- $score := int .proficiency -}}
+                                    {{- $learning := .learning | default false -}}
+                                    {{- $colors := .colors | default (slice "#72a4f2" "#72a4f2" "#72a4f2" "#72a4f2" "#72a4f2") -}}
+                                    {{- $languageID := .name | urlize -}}
+                                    <div class="language-row{{ if .credential }} language-row--credential{{ end }}">
+                                        <div class="language-summary">
+                                            <div class="language-name-line">
+                                                <span class="lang-name">{{ .name }}</span>
+                                            </div>
+                                            <div class="language-score">
+                                                <span class="language-meter" role="img" aria-label="{{ .name }} proficiency: {{ $score }} out of 5{{ if .learning }}; actively learning{{ end }}">
+                                                    {{ range $dot := seq 1 5 }}
+                                                    {{- $dotColor := index $colors (sub $dot 1) -}}
+                                                    <span class="language-meter__dot{{ if le $dot $score }} is-active{{ end }}{{ if and $learning (eq $dot (add $score 1)) }} is-learning{{ end }}" style="--language-dot-color: {{ $dotColor }}" aria-hidden="true"></span>
+                                                    {{ end }}
+                                                </span>
+                                                <span class="language-tools">
+                                                    <span class="language-tooltip">
+                                                        <button class="language-tool language-tool--info" type="button" aria-label="About {{ .name }} proficiency" aria-describedby="language-note-{{ $languageID }}">i</button>
+                                                        <span class="language-tooltip__content" id="language-note-{{ $languageID }}" role="tooltip">{{ .note }}</span>
+                                                    </span>
+                                                    {{ with .credential }}
+                                                    <span class="language-tooltip">
+                                                        <button class="language-tool language-tool--credential" type="button" aria-label="{{ .name }} certification details" aria-describedby="language-credential-{{ $languageID }}"><i class="fa-solid fa-certificate" aria-hidden="true"></i></button>
+                                                        <span class="language-tooltip__content language-tooltip__content--credential" id="language-credential-{{ $languageID }}" role="tooltip">
+                                                            <strong>{{ .name }} <span>{{ .year }}</span></strong>
+                                                            <small>Score {{ .score }} <span aria-hidden="true">·</span> CEFR {{ .cefr }}</small>
+                                                        </span>
+                                                    </span>
+                                                    {{ end }}
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {{ end }}
+                                </div>
+                            </div>
+                    </section>
+                    {{ end }}
+
+                    {{ if .Site.Params.about.certifications.enable }}
+                    <section class="card about-meta-card about-cert-card" aria-labelledby="certifications-title">
+                            <div class="card-body">
+                                <h6 class="about-meta-title" id="certifications-title">{{ .Site.Params.about.certifications.title }}</h6>
+                                <div class="about-cert-list">
+                                    {{ range .Site.Params.about.certifications.items }}
+                                    <div class="cert-row">
+                                        <div class="cert-copy">
+                                            <strong class="cert-name">{{ .name }}</strong>
+                                            <span class="cert-meta">Issued {{ .issued }}</span>
+                                        </div>
+                                    </div>
+                                    {{ end }}
+                                </div>
+                            </div>
+                    </section>
+                    {{ end }}
+                    </div>
+                </div>
+            </div>
+        </section>
+        {{ end }}
+    </div>
+</section>
+{{ end }}

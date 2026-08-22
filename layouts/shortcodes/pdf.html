@@ -1,0 +1,15 @@
+{{- $src := .Get "src" -}}
+{{- $title := .Get "title" | default "PDF document" -}}
+{{- $href := $src -}}
+{{- if not (or (strings.HasPrefix $src "http://") (strings.HasPrefix $src "https://")) -}}
+  {{- $href = $src | relURL -}}
+{{- end -}}
+{{- with .Page.Resources.GetMatch $src -}}
+  {{- $href = .RelPermalink -}}
+{{- end -}}
+<figure class="article-pdf">
+  <object data="{{ $href }}" type="application/pdf" title="{{ $title }}">
+    <p>Your browser cannot preview this PDF. <a href="{{ $href }}">Open {{ $title }}</a>.</p>
+  </object>
+  <figcaption><a href="{{ $href }}">Open {{ $title }} in a new tab</a></figcaption>
+</figure>

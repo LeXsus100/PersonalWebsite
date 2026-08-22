@@ -1,0 +1,24 @@
+{{- $src := .Get "src" -}}
+{{- $poster := .Get "poster" -}}
+{{- $caption := .Get "caption" -}}
+{{- $videoHref := $src -}}
+{{- if not (or (strings.HasPrefix $src "http://") (strings.HasPrefix $src "https://")) -}}
+  {{- $videoHref = $src | relURL -}}
+{{- end -}}
+{{- with .Page.Resources.GetMatch $src -}}
+  {{- $videoHref = .RelPermalink -}}
+{{- end -}}
+{{- $posterHref := $poster -}}
+{{- if and $poster (not (or (strings.HasPrefix $poster "http://") (strings.HasPrefix $poster "https://"))) -}}
+  {{- $posterHref = $poster | relURL -}}
+{{- end -}}
+{{- with .Page.Resources.GetMatch $poster -}}
+  {{- $posterHref = .RelPermalink -}}
+{{- end -}}
+<figure class="article-video">
+  <video controls preload="metadata"{{ with $posterHref }} poster="{{ . }}"{{ end }}>
+    <source src="{{ $videoHref }}"{{ with (.Get "type") }} type="{{ . }}"{{ end }}>
+    Your browser does not support embedded video. <a href="{{ $videoHref }}">Open the video</a>.
+  </video>
+  {{ with $caption }}<figcaption>{{ . }}</figcaption>{{ end }}
+</figure>

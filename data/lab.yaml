@@ -1,0 +1,28 @@
+spaces:
+  - key: writings
+    number: "01"
+    title: Writings
+    eyebrow: Think clearly
+    description: Thoughts, guides, deep dives, systems, and automation.
+    prompt: Read an idea from first principles
+
+  - key: projects
+    number: "02"
+    title: Projects
+    eyebrow: Build usefully
+    description: Tools and applications I have built, free or available to buy.
+    prompt: See what has made it into the world
+
+  - key: library
+    number: "03"
+    title: Library
+    eyebrow: Keep close
+    description: Academic material, reference sheets, reading lists, and curated resources.
+    prompt: Find something useful to return to
+
+  - key: experiments
+    number: "04"
+    title: Experiments
+    eyebrow: Test early
+    description: Work in progress, prototypes, and ideas that are still taking shape.
+    prompt: Follow something before it is finished

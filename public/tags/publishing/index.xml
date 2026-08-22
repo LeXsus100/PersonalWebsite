@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Publishing on Luigi</title><link>https://luigicasagrande.it/tags/publishing/</link><description>Recent content in Publishing on Luigi</description><generator>Hugo</generator><language>en-US</language><lastBuildDate>Sun, 09 Aug 2026 08:00:00 +0200</lastBuildDate><atom:link href="https://luigicasagrande.it/tags/publishing/index.xml" rel="self" type="application/rss+xml"/><item><title>Lab Article Style Guide</title><link>https://luigicasagrande.it/library/lab-article-style-guide/</link><pubDate>Sun, 09 Aug 2026 08:00:00 +0200</pubDate><guid>https://luigicasagrande.it/library/lab-article-style-guide/</guid><description>&lt;p&gt;This is the reference page I can keep open whenever I write for the Lab. It collects the article structure, typography, callout boxes, attachment buttons, media blocks, and small conventions that make separate entries feel like parts of the same website.&lt;/p&gt;
+&lt;aside class="article-callout article-callout--result"&gt;
+ &lt;p class="article-callout__title"&gt;Use this as the canonical reference&lt;/p&gt;
+ &lt;div&gt;Copy the smallest pattern that solves the problem. A page should still read well as plain text; the components are there to clarify hierarchy, not decorate every paragraph.&lt;/div&gt;
+&lt;/aside&gt;
+
+&lt;h2 id="start-from-the-article-archetype"&gt;Start from the article archetype&lt;/h2&gt;
+&lt;p&gt;Create each entry as a leaf bundle so its future screenshots, documents, and videos can live beside the Markdown file:&lt;/p&gt;</description></item></channel></rss>

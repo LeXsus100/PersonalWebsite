@@ -1,0 +1,20 @@
+{{- $src := .Get "src" -}}
+{{- $title := .Get "title" | default (path.Base $src) -}}
+{{- $meta := .Get "meta" | default "Download attachment" -}}
+{{- $compact := .Get "compact" -}}
+{{- $fileType := upper (strings.TrimPrefix "." (path.Ext $src)) | default "FILE" -}}
+{{- $href := $src -}}
+{{- if not (or (strings.HasPrefix $src "http://") (strings.HasPrefix $src "https://")) -}}
+  {{- $href = $src | relURL -}}
+{{- end -}}
+{{- with .Page.Resources.GetMatch $src -}}
+  {{- $href = .RelPermalink -}}
+{{- end -}}
+<a class="article-attachment{{ if $compact }} article-attachment--compact{{ end }}" href="{{ $href }}"{{ if .Get "download" }} download{{ end }}>
+  <span class="article-attachment__type" aria-hidden="true">{{ $fileType }}</span>
+  <span class="article-attachment__copy">
+    <strong>{{ $title }}</strong>
+    <small>{{ $meta }}</small>
+  </span>
+  <span class="article-attachment__action">Open <span aria-hidden="true">&#8599;</span></span>
+</a>

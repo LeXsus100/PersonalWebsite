@@ -1,0 +1,14 @@
+{{- $src := .Destination -}}
+{{- with .Page.Resources.GetMatch .Destination -}}
+  {{- $src = .RelPermalink -}}
+{{- else -}}
+  {{- if not (or (strings.HasPrefix $src "http://") (strings.HasPrefix $src "https://")) -}}
+    {{- $src = $src | relURL -}}
+  {{- end -}}
+{{- end -}}
+<figure class="article-figure">
+  <button class="article-figure__open" type="button" data-lightbox-src="{{ $src }}" data-lightbox-alt="{{ .Text | plainify }}"{{ with .Title }} data-lightbox-caption="{{ . | plainify }}"{{ end }} aria-label="Open image in full screen">
+    <img src="{{ $src }}" alt="{{ .Text | plainify }}" loading="lazy" decoding="async">
+  </button>
+  {{ with .Title }}<figcaption>{{ . | markdownify }}</figcaption>{{ end }}
+</figure>

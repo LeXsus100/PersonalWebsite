@@ -1,0 +1,86 @@
+{{ if .Site.Params.projects.enable | default false }}
+<section id="projects" class="py-5">
+    <div class="container">
+        <h3 class="text-center">{{ .Site.Params.projects.title | default "Projects" }}</h3>
+        <div class="row justify-content-center px-3 px-md-5">
+            {{ range .Site.Params.projects.items }}
+            {{- $project := . -}}
+            <div class="col-lg-4 col-md-6 my-3">
+                <div class="card my-3 h-100" title="{{ .title }}">
+                    {{ with .article }}
+                    <a class="project-card__article-link" href="{{ . | relURL }}" aria-label="Read the article about {{ $project.title }}">
+                        <span class="visually-hidden">Read the article about {{ $project.title }}</span>
+                    </a>
+                    {{ end }}
+                    <div class="card-head">
+                        <img class="card-img-top" src="{{ .image }}" alt="{{ .title }}">
+                    </div>
+                    <div class="card-body bg-transparent p-3">
+                        <div class="pb-2 bg-transparent">
+                            {{ range .badges }}
+                            <span class="badge badge-secondary">{{ . }}</span>
+                            {{ end }}
+                        </div>
+                        <h5 class="card-title bg-transparent mt-1">{{ .title }}</h5>
+                        <div class="card-text bg-transparent secondary-font">
+                            {{ .content }}
+                        </div>
+                        {{ with .article }}
+                        <a class="project-card__article-label" href="{{ . | relURL }}">Read the build story <span aria-hidden="true">&#8594;</span></a>
+                        {{ end }}
+                    </div>
+                    {{ if or (.links) (.featured) }}
+                    <div class="card-footer py-3">
+                        {{ range .links }}
+                        <span class="m-1 mx-2">
+                            <a href="{{ .url }}" target="_blank" rel="noopener noreferrer" aria-label="Open project link">
+                                <i class="{{ .icon }}"></i>
+                            </a>
+                        </span>
+                        {{ end }}
+                        {{ if .featured }}
+                        <span class="float-end">
+                            <a class="btn btn-sm" href="{{ .featured.link }}" target="_blank" rel="noopener noreferrer">
+                                {{ .featured.name }}
+                            </a>
+                        </span>
+                        {{ end }}
+                    </div>
+                    {{ end }}
+                </div>
+            </div>
+            {{ end }}
+
+            {{ range (where .Site.RegularPages "Type" "projects") }}
+            {{ if .Params.showInHome | default false }}
+            {{- $projectPage := . -}}
+            <div class="col-lg-4 col-md-6 my-3">
+                <div class="card my-3 h-100" title="{{ .Title }}">
+                    <a class="project-card__article-link" href="{{ .RelPermalink }}" aria-label="Read {{ .Title }}">
+                        <span class="visually-hidden">Read {{ .Title }}</span>
+                    </a>
+                    {{ with .Params.image }}
+                    <div class="card-head">
+                        <img class="card-img-top" src="{{ . | relURL }}" alt="{{ $projectPage.Title }}">
+                    </div>
+                    {{ end }}
+                    <div class="card-body bg-transparent p-3">
+                        <div class="pb-2 bg-transparent">
+                            {{ range .Params.badges }}
+                            <span class="badge badge-secondary">{{ . }}</span>
+                            {{ end }}
+                        </div>
+                        <h5 class="card-title bg-transparent">{{ .Title | truncate 50 }}</h5>
+                        <div class="card-text bg-transparent secondary-font">
+                            {{ .Summary | truncate 100 | safeHTML }}
+                        </div>
+                        <a class="project-card__article-label" href="{{ .RelPermalink }}">Read the build story <span aria-hidden="true">&#8594;</span></a>
+                    </div>
+                </div>
+            </div>
+            {{ end }}
+            {{ end }}
+        </div>
+    </div>
+</section>
+{{ end }}
