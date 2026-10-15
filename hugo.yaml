@@ -270,11 +270,30 @@ params:
     enable: true
     # title: "Custom Name"
     items:
+      - company: ABB E-mobility
+        companyUrl: https://e-mobility.abb.com/
+        jobs:
+          - name: Junior Production Planner # Job Title
+            date: September 2026 → Current
+            info:
+              content: Full-time # Synthetic explanation
+            content: |
+              I work within **Global Operations**, across **production planning**, **supply chain coordination**, **data analysis** and **process digitalisation**, supporting an international manufacturing network.
+
+              My work focuses on building and maintaining **production plans and schedules**, balancing demand with **capacity**, **material availability**, inventory and operational constraints.
+              
+              Alongside planning activities, I develop **tools**, **reports** and **data solutions** to support the company’s growing digitalisation and standardisation of planning processes.
+
+            featuredItems:
+              fontAwesomeIcons:
+                - icon: fas fa-location-dot
+                  tooltip: S. Giovanni Valdarno (AR), Italy
+
       - company: EssilorLuxottica
         companyUrl: https://www.essilorluxottica.com/
         jobs:
-          - name: Production Planning Engineer # Job Title
-            date: April 2026 - Current
+          - name: Intern Production Planning Engineer # Job Title
+            date: April 2026 → September 2026
             info:
               content: Internship # Synthetic explanation
             content: |
@@ -411,6 +430,22 @@ params:
     enable: true
     # title: "Portfolio"
     items:
+      - title: House Infrastructure Studio
+        content: Developing an open-source, full-stack application for visualising, documenting, and managing residential infrastructure in an interactive 3D environment. Built with React, TypeScript, Three.js, Node.js, and SQLite.
+        image: /images/House_infrastructure_software.png
+        # article: /projects/
+        featured:
+          name: Go to Website
+          link: https://lexsus100.github.io/house-infrastructure-studio/
+        badges:
+          - "TypeScript"
+          - "Three.js"
+          - "Software Architecture"
+        links:
+          - icon: fab fa-github
+            url: https://github.com/LeXsus100/house-infrastructure-studio
+
+
       - title: Treviso Mathematics Olympiad Website
         content: Created and maintain the official website for the Treviso Mathematics Olympiad district, providing updates and resources.
         image: /images/OlimatTV_logo.png
